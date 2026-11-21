@@ -1397,6 +1397,21 @@ body.rapido .rapid-pts{display:block}
 .rs-cols>div:last-child li::marker{color:var(--thrust)}
 @media (max-width:900px){ .rs-nums{grid-template-columns:1fr 1fr} .rs-cols{grid-template-columns:1fr;gap:12px} .callout.resumo .rs-lead{font-size:1.02rem} }
 .rs-nums i{font-style:normal;font-weight:700}.rs-nums i.up{color:var(--teal-2)}.rs-nums i.dn,.rs-nums b.dn{color:var(--rose-2)}
+
+/* ---------- valor de referência da Valuation ---------- */
+.vref{border:1px solid var(--border);border-radius:16px;padding:20px 22px;background:linear-gradient(135deg,rgba(255,106,44,.06),transparent 60%),var(--panel)}
+.vref h4{font:700 1.05rem var(--f-head);color:var(--text);margin:0 0 14px;letter-spacing:-.01em}
+.vr-g{display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:12px}
+.vr{border:1px solid var(--border);border-radius:12px;padding:14px 15px;background:rgba(255,255,255,.02)}
+.vr.main{border-color:var(--thrust-line,rgba(255,106,44,.45));background:rgba(255,106,44,.07)}
+.vr-k{display:block;font:700 .66rem var(--f-body);letter-spacing:.1em;text-transform:uppercase;color:var(--muted-2);margin-bottom:6px}
+.vr b{font:700 1.45rem var(--f-num);color:var(--text);letter-spacing:-.03em}
+.vr.main b{color:var(--thrust-2)}
+.vr em{font:700 .8rem var(--f-num);font-style:normal;margin-left:8px}
+.vr em.dn{color:var(--rose-2)}.vr em.up{color:var(--teal-2)}
+.vr p{font-size:.84rem;color:var(--muted);line-height:1.5;margin:8px 0 0}
+.vr-n{font-size:.88rem;color:var(--muted);margin:14px 0 0;line-height:1.55}
+@media (max-width:900px){ .vr-g{grid-template-columns:1fr} }
 </style>
 </head>
 <body>
@@ -1468,7 +1483,7 @@ body.rapido .rapid-pts{display:block}
     <div class="tele" aria-label="Números principais da análise">
           <div class="tr"><div class="tk">Cotação<small>fecho de 20 de novembro de 2026</small></div><div class="tv">$127,79</div></div>
           <div class="tr"><div class="tk">DCF · cenário base<small>valor de hoje por ação</small></div><div class="tv">$61,82<em class="dn">−51,6%</em></div></div>
-          <div class="tr"><div class="tk">Múltiplos · cenário base<small>38 vezes o EPS de 2027, no fim de 2027</small></div><div class="tv">$121,49<em class="dn">−4,9%</em></div></div>
+          <div class="tr"><div class="tk">Múltiplos · cenário base<small>38 vezes o EPS de 2027, no fim de 2027; $108,20 em valor de hoje</small></div><div class="tv">$121,49<em class="dn">−4,9%</em></div></div>
           <div class="tr next" id="teleNext"><div class="tk">Próxima data<small></small></div><div class="tv"></div></div>
         </div>
     <div class="rotator" aria-hidden="true">
@@ -2504,7 +2519,7 @@ body.rapido .rapid-pts{display:block}
           <tr><td>Viasat</td><td class="num">7,8</td><td class="num">4,7</td><td class="num">1,7%</td><td class="num">−0,5%</td><td class="num">3,8x</td><td class="num">n.s.</td><td class="num">n.s.</td><td class="num pos">+61,1%</td></tr>
         </tbody>
       </table>
-      <div class="tfoot-note">Dados de mercado do Pludata a 20 de novembro de 2026; ainda por confirmar no Pludata com sessão iniciada. SpaceX: capitalização sobre as 13.581 M de ações da capa do 10-Q, margem de doze meses calculada pelo analista com os documentos da SEC, P/E prospetivo sobre os $4,03 de EPS de 2027 do consenso da MarketScreener. *Desde a oferta a $135, porque só há cotação desde junho de 2026. **Cotada desde 19 de novembro de 2026, com oferta a $83. O P/E da Alphabet está reduzido por ganhos não operacionais. n.s.: não significativo; n.d.: não disponível.</div>
+      <div class="tfoot-note">Dados de mercado do Pludata a 20 de novembro de 2026. SpaceX: capitalização sobre as 13.581 M de ações da capa do 10-Q, margem de doze meses calculada pelo analista com os documentos da SEC, P/E prospetivo sobre os $4,03 de EPS de 2027 do consenso da MarketScreener. *Desde a oferta a $135, porque só há cotação desde junho de 2026. **Cotada desde 19 de novembro de 2026, com oferta a $83. O P/E da Alphabet está reduzido por ganhos não operacionais. n.s.: não significativo; n.d.: não disponível.</div>
     </div>
     <div class="callout reveal">
       <h4>Só a Tesla negoceia mais cara do que a SpaceX</h4>
@@ -2654,7 +2669,7 @@ body.rapido .rapid-pts{display:block}
     </div>
     <div class="notice reveal">
       <span class="ic">ⓘ</span>
-      <p><b>O que ficou por confirmar.</b> Os patamares de capitalização do prémio de Musk estão no prospeto e nos anexos, e não foram detalhados aqui. Ainda não há relatório de remuneração da primeira assembleia em bolsa, e por isso ainda não existe voto consultivo dos acionistas. As vendas de insiders nos últimos três meses somam $52,5 M, segundo a MarketBeat.</p>
+      <p><b>Remuneração ainda sem voto dos acionistas.</b> Os patamares de capitalização do prémio de Musk estão no prospeto e nos anexos. A primeira assembleia em bolsa ainda não teve relatório de remuneração, e por isso não há voto consultivo dos acionistas. As vendas de insiders nos últimos três meses somam $52,5 M, segundo a MarketBeat.</p>
     </div>
   </section>
 
@@ -3179,9 +3194,22 @@ body.rapido .rapid-pts{display:block}
   <section style="padding-top:0">
     <div class="callout resumo reveal">
       <h4>Em resumo</h4>
-      <p class="rs-lead">A $127,79 a ação paga o cenário base por múltiplos e o dobro do valor do modelo de caixa. O DCF dá $61,82, e 38 vezes o lucro de 2027 dá $121,49 no fim desse ano.</p>
-      <div class="rs-nums"><div><b>$61,82</b><span>DCF do cenário base, <i class="dn">−51,6%</i></span></div><div><b>$121,49</b><span>múltiplos no fim de 2027, <i class="dn">−4,9%</i></span></div><div><b>8,06%</b><span>retorno ao ano implícito, contra 11% exigidos</span></div><div><b>18x</b><span>resultado operacional de 2035 que a cotação pede; a fórmula dá 8,3x</span></div></div>
-      <div class="rs-cols"><div><h5>O que importa</h5><ul><li>97,8% do valor do DCF está no valor terminal, porque o fluxo de caixa é negativo até 2029.</li><li>O cenário base rende 9,9% ao ano até 2030; para 15% seria preciso um preço por watt 25% mais alto em todos os anos.</li><li>Cada 10% de preço por watt vale ≈$23 por ação, e mais gigawatts só criam valor acima de ≈$19 por watt.</li><li>O consenso, a $257,50, assenta num EPS de 2028 de $9,79 quase sem juros nem imposto.</li></ul></div><div><h5>O que pode mudar a tese</h5><ul><li>O preço por watt das renovações, que leva o DCF de $18,24 no pessimista a $280,06 no otimista.</li><li>Na fusão com a Tesla, a troca ao preço de mercado só tira valor pelo DCF se a Tesla valer menos de 48% do seu preço.</li></ul></div></div>
+      <p class="rs-lead">A estimativa central é ≈$114,36, 10,5% abaixo da cotação. Os dois métodos partem da mesma projeção e só discordam no preço da SpaceX em 2035. O DCF paga 8,3 vezes o resultado operacional desse ano e dá $61,82; os múltiplos de hoje equivalem a 15,1 vezes e dão $108,20, ou $121,49 no fim de 2027.</p>
+      <div class="rs-nums"><div><b>≈$114,36</b><span>estimativa central de hoje, <i class="dn">−10,5%</i></span></div><div><b>$61,82</b><span>DCF do cenário base, <i class="dn">−51,6%</i></span></div><div><b>$108,20</b><span>múltiplos do cenário base em valor de hoje, <i class="dn">−15,3%</i>; $121,49 no fim de 2027</span></div><div><b>8,3x e 15,1x</b><span>resultado operacional de 2035 que o DCF e os múltiplos pagam; a cotação pede 18x</span></div></div>
+      <div class="rs-cols"><div><h5>O que importa</h5><ul><li>97,8% do valor do DCF está no valor terminal, porque o fluxo de caixa é negativo até 2029.</li><li>Com mais dez anos de crescimento e a rentabilidade de 2035 para sempre, o DCF sobe só para $77,86, ou 10,7 vezes. Os 18 vezes da cotação equivalem a crescer 7,4% ao ano para sempre.</li><li>O preço por watt começa em $48, perto dos contratos curtos de hoje, e acaba em $19 em 2035, o preço dos contratos de três e cinco anos assinados em 2026. Cada 10% de preço vale ≈$23 por ação.</li><li>O consenso, a $257,50, assenta num EPS de 2028 de $9,79 quase sem juros nem imposto.</li></ul></div><div><h5>O que pode mudar a tese</h5><ul><li>O preço por watt das renovações, que leva o DCF de $18,24 no pessimista a $280,06 no otimista.</li><li>Na fusão com a Tesla, a troca ao preço de mercado só tira valor pelo DCF se a Tesla valer menos de 48% do seu preço.</li></ul></div></div>
+    </div>
+  </section>
+
+
+  <section style="padding-top:6px" class="k5">
+    <div class="vref reveal">
+      <h4>O valor de referência é ≈$114,36</h4>
+      <div class="vr-g">
+        <div class="vr main"><span class="vr-k">Estimativa central · hoje</span><b>≈$114,36</b><em class="dn">−10,5%</em><p>O número para comparar com a cotação. É a média dos dois métodos, cada um com os três cenários pesados a 25%, 50% e 25%.</p></div>
+        <div class="vr"><span class="vr-k">DCF · cenário base · hoje</span><b>$61,82</b><em class="dn">−51,6%</em><p>O que valem os fluxos de caixa se em 2035 a SpaceX valer 8,3 vezes o resultado operacional, como uma empresa madura que cresce 3,5% ao ano.</p></div>
+        <div class="vr"><span class="vr-k">Múltiplos · cenário base · hoje</span><b>$108,20</b><em class="dn">−15,3%</em><p>38 vezes o lucro de 2027 dá $121,49 no fim desse ano. Trazido a hoje a 11%, equivale a pagar 15,1 vezes o resultado operacional de 2035.</p></div>
+      </div>
+      <p class="vr-n">Os dois métodos usam a mesma receita, a mesma margem e o mesmo investimento até 2035. A distância entre $61,82 e $108,20 é o preço que se paga pela SpaceX madura, e a secção 08 mede-a.</p>
     </div>
   </section>
 
@@ -3209,7 +3237,7 @@ body.rapido .rapid-pts{display:block}
     </div>
     <div class="callout reveal">
       <h4>Cinco meses de cotações</h4>
-      <p>A ação passou de um preço de euforia a um preço abaixo da oferta em cinco meses. O free float é de 4,35 mil M de ações, 32% das da capa do 10-Q, e o lock-up continua a libertar ações. As posições curtas valem 3,3% do free float. Com tão pouco histórico, não há múltiplo médio nem beta fiável. O preço de $127,79 é o fecho de 20 de novembro de 2026 e deve ser confirmado no Pludata.</p>
+      <p>A ação passou de um preço de euforia a um preço abaixo da oferta em cinco meses. O free float é de 4,35 mil M de ações, 32% das da capa do 10-Q, e o lock-up continua a libertar ações. As posições curtas valem 3,3% do free float. Com tão pouco histórico, não há múltiplo médio nem beta fiável. O preço de $127,79 é o fecho de 20 de novembro de 2026.</p>
     </div>
   </section>
 
@@ -3383,7 +3411,7 @@ body.rapido .rapid-pts{display:block}
       <div class="as-item" style="--as:var(--teal)"><div class="k">Crescimento perpétuo</div><div class="v">3,50%</div><div class="d">Acima da economia nominal de longo prazo, porque em 2035 a receita ainda cresce 7%, e abaixo da taxa sem risco de 4,91%.</div></div>
       <div class="as-item" style="--as:var(--azure)"><div class="k">Margem operacional terminal</div><div class="v">29,5%</div><div class="d">Depois da remuneração em ações. A média ponderada de 45% na Starlink, 26,5% na computação e software e 15% nos lançamentos. Foi de 19,1% no 3.º trimestre de 2026.</div></div>
       <div class="as-item" style="--as:var(--violet)"><div class="k">Receita de 2025 a 2035</div><div class="v">45,6% ao ano</div><div class="d">De $18,7 mil M para $801 mil M: $643 mil M na Super Intelligence, $140 mil M na Starlink e $18 mil M nos lançamentos, com 48 GW em 2035.</div></div>
-      <div class="as-item" style="--as:var(--amber)"><div class="k">Preço por watt</div><div class="v">$48 a $19</div><div class="d">Ao ano, de 2027 a 2035. $19 por watt paga a depreciação, a energia e um retorno normal sobre $30 mil M por GW. A gestão diz que o preço vai subir; a secção 10 mostra quanto vale cada dólar.</div></div>
+      <div class="as-item" style="--as:var(--amber)"><div class="k">Preço por watt</div><div class="v">$48 a $19</div><div class="d">Ao ano, de 2027 a 2035. Começa perto dos contratos curtos de hoje e acaba no preço dos contratos de três e cinco anos assinados em 2026. $19 paga a depreciação, a energia e um retorno normal sobre $30 mil M por GW; a secção 10 compara a curva com os contratos da IREN.</div></div>
       <div class="as-item" style="--as:var(--rose)"><div class="k">Capex</div><div class="v">142% a 33%</div><div class="d">Da receita, de 2027 a 2035. Em dinheiro, $256 mil M em 2027 contra $242,8 mil M do consenso, e $262 mil M em 2035.</div></div>
     </div>
 
@@ -3550,6 +3578,11 @@ body.rapido .rapid-pts{display:block}
         <p>Uma empresa madura tem menos risco, e é razoável usar um custo do capital mais baixo no valor terminal. Mesmo com 8,5%, o de uma grande tecnológica, o valor fica em $90,16 e o múltiplo implícito em 12,5 vezes. A distância até à cotação vem do investimento de manutenção que o modelo projeta, mais do que da taxa de desconto.</p>
       </div>
     </div>
+    <div class="callout teal reveal">
+      <h4>O teste mais generoso ao valor terminal dá $77,86, ou 10,7 vezes</h4>
+      <p>A fórmula assume que, depois de 2035, a SpaceX cresce 3,5% ao ano e reinveste ≈24% do resultado operacional depois de imposto, o que dá um retorno de 14,8% sobre o capital novo, acima dos 11% exigidos. Em 2035 o modelo ainda cresce 7,2%. Se o crescimento descer de forma gradual até 3,5% em 2045, com o retorno de 30,5% que o modelo tem em 2035 a manter-se para sempre, o valor sobe para <b>$77,86</b> e o múltiplo implícito para 10,7 vezes. Com um retorno de 20%, fica em $71,40.</p>
+      <p>Os 18 vezes que a cotação pede equivalem a crescer 7,4% ao ano para sempre, ou a um custo do capital de ≈7%. Os 18 a 20 vezes da Oracle e da Alphabet são múltiplos de hoje, pagos a empresas que ainda crescem e investem, e por isso servem de teto mais do que de referência para 2035.</p>
+    </div>
   </section>
 
   <section id="val-sens">
@@ -3654,6 +3687,31 @@ body.rapido .rapid-pts{display:block}
       <div class="callout teal reveal" style="margin-top:0">
         <h4>A quantidade sozinha quase não altera o valor</h4>
         <p>Ao preço do cenário base, 36 GW em 2035 valem $62,08 por ação e 60 GW valem $61,55: a $19 por watt cada gigawatt novo paga o seu custo do capital e pouco mais. Com preços 20% mais baixos, mais gigawatts destroem valor, de $27,29 para $3,80. Com preços 20% mais altos criam, de $96,88 para $119,30. A meta de 13 GW de Musk só acrescenta valor se o preço se mantiver alto.</p>
+      </div>
+    </div>
+    <h3 style="font-size:1.05rem;margin:28px 0 12px">O preço por watt do modelo face aos contratos assinados em 2025 e 2026</h3>
+    <div class="grid-2">
+      <div class="twrap">
+        <table class="pro narrow">
+          <thead><tr><th>Referência</th><th class="num">$ por watt ao ano</th></tr></thead>
+          <tbody>
+            <tr><td>SpaceX, contratos atuais, «ligeiramente acima» do topo</td><td class="num">30 a 50</td></tr>
+            <tr class="hl-row"><td>Cenário base, 2027</td><td class="num">48</td></tr>
+            <tr><td>IREN, contrato curto assinado depois de setembro de 2026</td><td class="num">40</td></tr>
+            <tr><td>IREN, contrato de cinco anos assinado depois de setembro de 2026</td><td class="num">≈22</td></tr>
+            <tr><td>IREN, contratos de três anos no 3.º trimestre de 2026</td><td class="num">19 a 23</td></tr>
+            <tr class="hl-row"><td>Cenário base, 2035</td><td class="num">19</td></tr>
+            <tr><td>IREN, contratos de cinco anos no 3.º trimestre de 2026</td><td class="num">≈17</td></tr>
+            <tr><td>Cenário pessimista, 2035</td><td class="num">13,5</td></tr>
+            <tr><td>IREN com a Microsoft, cinco anos, novembro de 2025</td><td class="num">≈9,7</td></tr>
+          </tbody>
+        </table>
+        <div class="tfoot-note">IREN: receita anual estimada por megawatt de carga de TI, no 8-K de 5 de novembro de 2026, com os resultados do trimestre até 30 de setembro; $ milhões por megawatt ao ano equivalem a $ por watt ao ano. Microsoft: $9,7 mil M em cinco anos para 200 MW de carga de TI em Childress, no Texas (comunicado da IREN de 3 de novembro de 2025), divisão feita nesta análise. SpaceX: Bret Johnsen, conferência de 20 de outubro de 2026; a empresa não diz se mede por carga de TI ou pela potência total.</div>
+      </div>
+      <div class="callout reveal" style="margin-top:0">
+        <h4>A curva vai do preço dos contratos curtos ao dos contratos longos de 2026</h4>
+        <p>Os $48 de 2027 ficam entre os $40 do contrato curto da IREN e o topo dos $30 a $50 que a SpaceX diz cobrar. Os $19 de 2035 são o preço dos contratos de três e cinco anos assinados em 2026, já em plena escassez. O modelo assume assim que, quando a oferta alcançar a procura, a computação da SpaceX passa a ser paga ao preço dos contratos a prazo.</p>
+        <p>Os preços longos ainda estão a subir. Na IREN, o contrato de cinco anos passou de ≈$9,7 por watt em novembro de 2025 para ≈$17 no 3.º trimestre de 2026 e ≈$22 depois, e a Nebius disse à CNBC a 21 de outubro que o preço por megawatt continua a subir. O pessimista, com $13,5 em 2035, fica entre o contrato com a Microsoft e os contratos de 2026.</p>
       </div>
     </div>
   </section>
@@ -3916,7 +3974,7 @@ body.rapido .rapid-pts{display:block}
 
 <footer><div class="container">
   <div class="f-brand">Space Exploration Technologies Corp. (SPCX) · Análise Fundamental</div>
-  <p>Rodrigo Silva · <a href="https://www.linkedin.com/company/asclub/?viewAsMember=true" target="_blank" rel="noopener">AS CLUB</a> · fecho de $127,79 a 20 de novembro de 2026; dados de mercado do Pludata (pares, consenso de 40 analistas e posições curtas, 19 e 20 de novembro de 2026, ainda por confirmar com sessão iniciada). Fontes primárias: Prospeto 424B4 (12 de junho de 2026) e prospeto livre de 5 de junho de 2026; 10-Q do 2.º e do 3.º trimestres de 2026 (4 de agosto e 22 de outubro); 8-K de 16 e 26 de junho, 4 e 14 de agosto, 20 e 26 de outubro e 6 de novembro de 2026; Schedule 13G de agosto e 13G/A de 13 e 16 de novembro de 2026; S-1 da Anthropic (26 de outubro, alterado a 17 de novembro); 10-Q do 3.º trimestre e proxy de 2026 da Tesla. Transcrição da conferência de 20 de outubro de 2026 publicada pela The Motley Fool. Fontes externas: consenso financeiro da MarketScreener (3 de novembro), CNBC e LSEG (20 de outubro), Bloomberg citada pela Reuters, pela CNBC e pela Electrek (12 de novembro), Axios (12 de novembro), Space.com, Aerospace America e Interesting Engineering (voo 15), TechCrunch e The Next Web (oferta da Anthropic e declarações de Musk sobre os contratos públicos), Fortune e TechCrunch (Roelof Botha, 17 de junho), Bisnow e The Next Web ($74 mil M em centros de dados), 24/7 Wall St. e Benzinga (20 de novembro), Fitch citada pela 24/7 Wall St. (28 de outubro), Morningstar citada pela Stocktwits, Bloomberg Intelligence citada pelo Yahoo Finance, guias de preços da Starlink (USMobile, SatelliteInternet.com e The Next Web), Briefs e Light Reading sobre a Amazon Leo. Pontos ainda aproximados: ações diluídas do modelo, identidade dos Clientes A e B, preço dos 800 MHz, cotação das notas de 2056.</p>
+  <p>Rodrigo Silva · <a href="https://www.linkedin.com/company/asclub/?viewAsMember=true" target="_blank" rel="noopener">AS CLUB</a> · fecho de $127,79 a 20 de novembro de 2026; dados de mercado do Pludata (pares, consenso de 40 analistas e posições curtas, 19 e 20 de novembro de 2026). Fontes primárias: Prospeto 424B4 (12 de junho de 2026) e prospeto livre de 5 de junho de 2026; 10-Q do 2.º e do 3.º trimestres de 2026 (4 de agosto e 22 de outubro); 8-K de 16 e 26 de junho, 4 e 14 de agosto, 20 e 26 de outubro e 6 de novembro de 2026; Schedule 13G de agosto e 13G/A de 13 e 16 de novembro de 2026; S-1 da Anthropic (26 de outubro, alterado a 17 de novembro); 10-Q do 3.º trimestre e proxy de 2026 da Tesla. Transcrição da conferência de 20 de outubro de 2026 publicada pela The Motley Fool. Fontes externas: consenso financeiro da MarketScreener (3 de novembro), CNBC e LSEG (20 de outubro), Bloomberg citada pela Reuters, pela CNBC e pela Electrek (12 de novembro), Axios (12 de novembro), Space.com, Aerospace America e Interesting Engineering (voo 15), TechCrunch e The Next Web (oferta da Anthropic e declarações de Musk sobre os contratos públicos), Fortune e TechCrunch (Roelof Botha, 17 de junho), Bisnow e The Next Web ($74 mil M em centros de dados), 24/7 Wall St. e Benzinga (20 de novembro), Fitch citada pela 24/7 Wall St. (28 de outubro), Morningstar citada pela Stocktwits, Bloomberg Intelligence citada pelo Yahoo Finance, guias de preços da Starlink (USMobile, SatelliteInternet.com e The Next Web), Briefs e Light Reading sobre a Amazon Leo. Pontos ainda aproximados: ações diluídas do modelo, identidade dos Clientes A e B, preço dos 800 MHz, cotação das notas de 2056.</p>
   <div class="disc">
     <b>Aviso legal.</b> Este documento foi elaborado exclusivamente para fins educativos e formativos, com o objetivo de ilustrar a metodologia de uma análise fundamental de ações. Não constitui, e em nenhuma circunstância deve ser interpretado como, recomendação de investimento, aconselhamento financeiro, jurídico ou fiscal, nem oferta ou solicitação de compra ou venda de quaisquer valores mobiliários. Investir em ações envolve risco, incluindo a perda do capital. Rentabilidades passadas não garantem rentabilidades futuras. A informação foi obtida de fontes consideradas fiáveis, sem garantia de exatidão ou de atualidade. Cada investidor deve fazer a sua própria análise ou consultar um profissional habilitado.
   </div>
