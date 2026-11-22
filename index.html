@@ -1428,6 +1428,48 @@ body.rapido .rapid-pts{display:block}
   .calc-tesla .calc-col>.callout{order:3}
 }
 @media (max-width:760px){ .merge-head{flex-direction:column;align-items:flex-start;gap:14px} }
+
+/* ---------- crítica de 22 nov: explicação de cada negócio, racional da fusão e conta do EPS ---------- */
+.bm-card .bm-how{font-size:.92rem;line-height:1.6;color:var(--text);opacity:.92;margin:6px 0 14px}
+.fx-list{margin:6px 0 0;padding-left:1.05em}
+.fx-list li{font-size:.9rem;line-height:1.55;color:var(--muted);margin:0 0 9px}
+.fx-list li b{color:var(--text)}
+.eps-calc{margin:14px 0 0;padding:14px 18px;border:1px dashed var(--border-2,var(--border));border-radius:12px;font-size:.88rem;line-height:1.6;color:var(--muted);background:rgba(255,255,255,.02)}
+.eps-calc b{color:var(--text)}
+
+/* ---------- fusão com a Tesla, refeita a 22 nov: faixa do estado e passos numerados ---------- */
+.mg-status{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:20px 0 4px}
+.mg-status>div{border:1px solid var(--border);border-radius:12px;padding:13px 15px;background:rgba(255,255,255,.02)}
+.mg-status span{display:block;font:700 .64rem var(--f-body);letter-spacing:.1em;text-transform:uppercase;color:var(--thrust-2)}
+.mg-status b{display:block;font:700 .98rem/1.3 var(--f-head);color:var(--text);margin:6px 0 4px}
+.mg-status em{display:block;font-style:normal;font-size:.8rem;color:var(--muted);line-height:1.45}
+.mg-step{display:flex;align-items:center;gap:12px;margin:38px 0 14px}
+.mg-n{flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font:700 .85rem var(--f-num);color:#0B0D12;background:var(--thrust)}
+.mg-step h3{font:700 1.12rem/1.35 var(--f-head);margin:0;color:var(--text)}
+.fx-grid{align-items:stretch!important}
+.fx-grid>.callout{margin-top:0}
+.mg-pair{align-items:start}
+.mg-swap{display:flex;flex-direction:column;gap:12px}
+.mg-k{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mg-k>div{border:1px solid var(--border);border-radius:12px;padding:14px 15px;background:var(--panel)}
+.mg-k span{display:block;font:700 .64rem var(--f-body);letter-spacing:.1em;text-transform:uppercase;color:var(--muted-2)}
+.mg-k b{display:block;font:700 1.32rem var(--f-num);color:var(--text);margin-top:7px;letter-spacing:-.02em;white-space:nowrap}
+.mg-k i{display:block;font-style:normal;font:700 .8rem var(--f-num);color:var(--muted);margin-top:3px}
+.mg-k i.dn{color:var(--rose-2)}
+.mg-txt{font-size:.9rem;line-height:1.55;color:var(--muted);margin:0}
+.mg-swap .eps-calc{margin:0}
+#gestao-tesla .rose{margin-top:14px}
+@media (max-width:1000px){ .mg-status{grid-template-columns:1fr 1fr} }
+@media (max-width:520px){ .mg-status{grid-template-columns:1fr} .mg-k b{font-size:1.12rem} .mg-step h3{font-size:1.02rem} }
+
+/* tabela dos prémios no telemóvel: só prémio, rácio, EPS e ponto neutro */
+@media (max-width:600px){ .mg-prem th:nth-child(3),.mg-prem td:nth-child(3),.mg-prem th:nth-child(4),.mg-prem td:nth-child(4),.mg-prem th:nth-child(5),.mg-prem td:nth-child(5),.mg-prem th:nth-child(7),.mg-prem td:nth-child(7){display:none} .mg-prem table.pro{min-width:0!important;width:100%!important} .mg-prem td,.mg-prem th{white-space:normal!important;padding-left:8px!important;padding-right:8px!important} .mg-prem .tscroll-hint{display:none} }
+
+/* cabeçalho da fusão: título à esquerda, logótipos encostados à direita (22 nov) */
+.merge-head{justify-content:space-between;align-items:center}
+.merge-head .mh-t{order:1;flex:1 1 auto;max-width:760px}
+.merge-head .merge-lockup{order:2;margin-left:auto}
+@media (max-width:760px){ .merge-head{align-items:flex-start} .merge-head .merge-lockup{margin-left:0} }
 </style>
 </head>
 <body>
@@ -1495,24 +1537,13 @@ body.rapido .rapid-pts{display:block}
       <img src="data:image/png;base64,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" alt="SpaceX" style="display:block;height:auto;width:100%;max-width:300px">
     </div>
     <h1 class="crumb"><span class="pulse-dot"></span> NASDAQ · SPCX · Análise fundamental formativa</h1>
-    <p class="lead">A SpaceX lança foguetões, vende internet por satélite e, desde fevereiro de 2026, aluga computação para inteligência artificial e faz os seus próprios modelos, com a xAI, a X e a Cursor. O terceiro negócio foi comprado em fevereiro e já é 52% da receita, sobretudo por causa de um cliente, a Anthropic, que se comprometeu a gastar até $120,5 mil M até 2029. A ação entrou em bolsa a $135 em junho, tocou $225,64 cinco dias depois e fechou a 20 de novembro a $127,79. O investimento em centros de dados está a consumir mais de três vezes a caixa que a empresa gera, e as comissões especiais da SpaceX e da Tesla negoceiam uma fusão.</p>
+    <p class="lead">A SpaceX começou por fazer foguetões, usou-os para construir a Starlink, a maior rede de internet por satélite, e desde fevereiro de 2026 aluga centros de dados a empresas de inteligência artificial, além de vender os seus próprios produtos de IA, como o Grok e a Cursor. A Starlink dá hoje o lucro e a computação dá o crescimento, com mais de metade da receita. A empresa investe muito mais do que a operação gera, e a ação, que entrou em bolsa em junho, vale hoje perto do preço da oferta.</p>
     <div class="tele" aria-label="Números principais da análise">
           <div class="tr"><div class="tk">Cotação<small>fecho de 20 de novembro de 2026</small></div><div class="tv">$127,79</div></div>
           <div class="tr"><div class="tk">DCF · cenário base<small>valor de hoje por ação</small></div><div class="tv">$61,82<em class="dn">−51,6%</em></div></div>
           <div class="tr"><div class="tk">Múltiplos · cenário base<small>38 vezes o EPS de 2027, no fim de 2027; $108,20 em valor de hoje</small></div><div class="tv">$121,49<em class="dn">−4,9%</em></div></div>
           <div class="tr next" id="teleNext"><div class="tk">Próxima data<small></small></div><div class="tv"></div></div>
         </div>
-    <div class="rotator" aria-hidden="true">
-      <span class="rot-k">Cinco números</span>
-      <span class="rot-window">
-        <span class="rot-item">Receita de <b>$14,6 mil M</b> no 3.º trimestre, mais <b>161%</b></span>
-        <span class="rot-item">Anthropic: até <b>$120,5 mil M</b> de computação até 2029, ≈$3,1 mil M por mês a partir de dezembro</span>
-        <span class="rot-item"><b>13,6 M</b> de subscritores da Starlink, mais 1,6 M num trimestre</span>
-        <span class="rot-item">Capex de <b>$48,1 mil M</b> em nove meses, contra $13,1 mil M de caixa da operação</span>
-        <span class="rot-item">DCF de <b>$61,82</b> e múltiplos de <b>$121,49</b>, com a cotação a $127,79</span>
-      </span>
-      <span class="rot-dots"><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i></span>
-    </div>
       </div>
       <div class="hx-r">
         <figure class="orbits" id="sxOrbitFig">
@@ -1532,21 +1563,17 @@ body.rapido .rapid-pts{display:block}
 
   <section class="k5">
     <div class="snap-grid">
-      <div class="tile snap reveal" style="--sn:var(--ion)"><div class="l">Cap. bolsista</div><div class="v">$1,74 bi</div><div class="s">43,4% abaixo do máximo intradiário de $225,64 (16 de junho) e 5,3% abaixo dos $135 da entrada em bolsa</div></div>
-      <div class="tile snap reveal" style="--sn:var(--azure)"><div class="l">Receita · 12 meses</div><div class="v">$32,0 mil M</div><div class="s">$18,7 mil M em 2025; guidance de $33 a $37 mil M só no 1.º trimestre de 2027</div></div>
-      <div class="tile snap reveal" style="--sn:var(--violet)"><div class="l">Super Intelligence · 3.º trim.</div><div class="v">$7,56 mil M</div><div class="s">+830%; 52% da receita, com um cliente a pesar 34,5% do total</div></div>
-      <div class="tile snap reveal" style="--sn:var(--teal)"><div class="l">Starlink · 3.º trim.</div><div class="v">$5,25 mil M</div><div class="s">+69%; margem operacional de 45,1% e 13,6 M de subscritores</div></div>
-      <div class="tile snap reveal" style="--sn:var(--amber)"><div class="l">Carteira a 30 de setembro</div><div class="v">$63,0 mil M</div><div class="s">≈$42 mil M em doze meses; depois de janeiro e março de 2027 a Anthropic pode sair com 90 dias de aviso</div></div>
-      <div class="tile snap reveal" style="--sn:var(--rose)"><div class="l">Fluxo de caixa livre · 12 meses</div><div class="v">−$39,2 mil M</div><div class="s">$15,8 mil M da operação menos $55,0 mil M de capex; $35 a $40 mil M de capex só no 4.º trimestre</div></div>
-      <div class="tile snap reveal" style="--sn:var(--azure-2)"><div class="l">P/E 2027E</div><div class="v">40,0x</div><div class="s">sobre $3,20 de EPS do cenário base; 31,7x sobre os $4,03 do consenso</div></div>
-      <div class="tile snap reveal" style="--sn:var(--teal-2)"><div class="l">Caixa líquida</div><div class="v">$50,9 mil M</div><div class="s">$89,9 mil M de caixa e títulos contra $39,0 mil M de dívida e locações; Fitch BBB+</div></div>
+      <div class="tile snap reveal" style="--sn:var(--azure)"><div class="l">Receita · 12 meses</div><div class="v">$32,0 mil M</div><div class="s">no último trimestre, mais de metade veio da computação</div></div>
+      <div class="tile snap reveal" style="--sn:var(--teal)"><div class="l">Starlink · margem operacional</div><div class="v">45,1%</div><div class="s">o negócio que dá o lucro da empresa</div></div>
+      <div class="tile snap reveal" style="--sn:var(--rose)"><div class="l">Fluxo de caixa livre · 12 meses</div><div class="v">−$39,2 mil M</div><div class="s">a empresa investe muito mais do que gera</div></div>
+      <div class="tile snap reveal" style="--sn:var(--teal-2)"><div class="l">Caixa líquida</div><div class="v">$50,9 mil M</div><div class="s">por agora há mais caixa do que dívida</div></div>
     </div>
   </section>
 
 
   <section id="home-ritmo">
     <span class="stag">Potência e calendário</span>
-    <h2 class="stitle">1,7 GW ligados em setembro, <span class="accent">13 GW prometidos para o fim de 2027</span></h2>
+    <h2 class="stitle">A potência ligada tem de crescer quase oito vezes <span class="accent">para cumprir a meta de Musk para 2027</span></h2>
     <p class="ssub">A receita da computação depende dos gigawatts ligados, e o preço da ação depende das datas em que se vai saber se as promessas se cumprem. O primeiro bloco mostra a distância entre a potência atual e as metas, e o segundo conta os dias até às próximas datas.</p>
     <div class="sx-dual">
       <div class="tile gwm reveal">
@@ -1582,7 +1609,7 @@ body.rapido .rapid-pts{display:block}
     <div class="hub-grid">
       <a class="tile hub reveal" href="#modelo" style="--hb:var(--azure);--hbsoft:var(--azure-soft);--hbline:var(--azure-line)">
         <div class="hub-ic"><svg viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="2"/><path d="M9 9h6v6H9zM9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></svg></div>
-        <h3>Modelo de Negócio</h3><p>Lançamentos, Starlink e computação para IA. A Starlink dá quase todo o resultado operacional, e a computação alugada fez a receita passar de $5,6 mil M para $14,6 mil M num ano, com a Anthropic como maior cliente.</p><span class="go">Abrir tema →</span></a>
+        <h3>Modelo de Negócio</h3><p>Os três negócios da SpaceX, como funciona cada um, como ganha dinheiro e quanto pesa na receita.</p><span class="go">Abrir tema →</span></a>
       <a class="tile hub reveal" href="#jornada" style="--hb:var(--ion);--hbsoft:var(--ion-soft);--hbline:var(--ion-line)">
         <div class="hub-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.2"/><circle cx="4.5" cy="18.5" r="2.2"/><circle cx="19.5" cy="18.5" r="2.2"/><path d="M11 7l-5.4 9.6M13 7l5.4 9.6M6.8 18.5h10.4"/></svg></div>
         <h3>Jornada do Cliente</h3><p>Uma família numa quinta sem fibra, em dez momentos, desde a pesquisa da antena até à decisão de ficar ou sair, e uma comparação com os outros quatro tipos de cliente, incluindo o laboratório de IA.</p><span class="go">Abrir tema →</span></a>
@@ -1594,10 +1621,10 @@ body.rapido .rapid-pts{display:block}
         <h3>Concorrência</h3><p>A Rocket Lab e a Blue Origin nos foguetões, a Amazon Leo e a AST SpaceMobile na ligação, e a Oracle, a CoreWeave e os próprios clientes na computação. A Anthropic, cotada desde 19 de novembro, é ao mesmo tempo cliente e rival do Grok.</p><span class="go">Abrir tema →</span></a>
       <a class="tile hub reveal" href="#gestao" style="--hb:var(--amber);--hbsoft:var(--amber-soft);--hbline:var(--amber-line)">
         <div class="hub-ic"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M16 5.5a3 3 0 0 1 0 5.5M21 20c0-2.6-1.6-4.8-3.9-5.6"/></svg></div>
-        <h3>Gestão e Estrutura Acionista</h3><p>Musk tem 84,4% dos votos e um prémio de 1.302 M de ações que depende de uma colónia em Marte. Inclui a conta de uma fusão com a Tesla, com a troca de ações ao preço de mercado e uma calculadora.</p><span class="go">Abrir tema →</span></a>
+        <h3>Gestão e Estrutura Acionista</h3><p>Musk controla os votos e tem um prémio ligado a Marte. Inclui a possível fusão com a Tesla, o racional, um exemplo para o acionista e uma calculadora.</p><span class="go">Abrir tema →</span></a>
       <a class="tile hub reveal" href="#saude" style="--hb:var(--azure-2);--hbsoft:var(--azure-soft);--hbline:var(--azure-line)">
         <div class="hub-ic"><svg viewBox="0 0 24 24"><path d="M3 12h4l2-6 4 12 2-6h6"/></svg></div>
-        <h3>Saúde Financeira</h3><p>A entrada em bolsa deu $85,7 mil M e o balanço tem caixa líquida de $50,9 mil M. O ponto sensível é 2027: o consenso espera $242,8 mil M de capex, e o financiamento dos centros de dados passa a ser a variável decisiva.</p><span class="go">Abrir tema →</span></a>
+        <h3>Saúde Financeira</h3><p>O balanço tem hoje mais caixa do que dívida, mas o investimento em centros de dados vai exigir muito financiamento a partir de 2027.</p><span class="go">Abrir tema →</span></a>
       <a class="tile hub reveal" href="#riscos" style="--hb:var(--rose);--hbsoft:var(--rose-soft);--hbline:var(--rose-line)">
         <div class="hub-ic"><svg viewBox="0 0 24 24"><path d="M12 3l9 17H3L12 3z"/><path d="M12 10v4M12 17.5v.01"/></svg></div>
         <h3>Riscos</h3><p>Mapa interativo com nove riscos por probabilidade e impacto, da queda do preço da computação à concentração na Anthropic e ao novo Congresso, um teste de stress ligado ao modelo e as datas a acompanhar até junho de 2027.</p><span class="go">Abrir tema →</span></a>
@@ -1609,26 +1636,26 @@ body.rapido .rapid-pts{display:block}
 
   <section class="k5">
     <span class="stag">A tese, em três pontos</span>
-    <h2 class="stitle">Starlink rentável, computação a crescer <span class="accent">e um preço que depende de 2035</span></h2>
+    <h2 class="stitle">A Starlink paga as contas, <span class="accent">e a computação decide o preço da ação</span></h2>
     <div class="grid-3">
       <div class="tile card reveal">
         <h4>1 · A Starlink já é um negócio rentável</h4>
-        <p>A receita de ligação passou de $3,9 mil M em 2023 para $11,4 mil M em 2025 e $12,8 mil M só em nove meses de 2026. No 3.º trimestre rendeu <b>$2,37 mil M de resultado operacional</b>, 45,1% de margem, com 13,6 M de subscritores. Sem ela, o resultado operacional da empresa nesse trimestre teria sido de $424 M.</p>
+        <p>A rede de satélites já está construída, e cada cliente novo acrescenta receita quase sem custo. No 3.º trimestre a Starlink teve uma margem operacional de <b>45,1%</b>, e sem ela a empresa quase não teria resultado operacional.</p>
       </div>
       <div class="tile card reveal">
         <h4>2 · A computação alugada mudou a escala da empresa</h4>
-        <p>A Anthropic comprometeu-se a gastar até <b>$120,5 mil M</b> até 2029, ≈$3,1 mil M por mês com a capacidade toda, e a Google $920 M por mês. Juntas valem ≈$48 mil M por ano, e a gestão aponta para $33 a $37 mil M de receita total só no 1.º trimestre de 2027. A partir de março de 2027 os dois contratos podem acabar com 90 dias de aviso, e a Anthropic sozinha pesará perto de um quarto da receita.</p>
+        <p>A Anthropic e a Google contrataram capacidade por vários anos, e a computação passou a ser a maior fonte de receita. O risco está no preço, que hoje beneficia da falta de capacidade no mercado, e nos contratos, que a partir de março de 2027 podem acabar com 90 dias de aviso.</p>
       </div>
       <div class="tile card reveal">
         <h4>3 · O preço depende do múltiplo que o mercado pagar em 2035</h4>
-        <p>A $127,79 a ação vale 40 vezes o lucro de 2027 deste modelo. O DCF dá <b>$61,82</b>, porque cobra os anos de investimento e avalia a empresa madura de 2035 a 8,3 vezes o resultado operacional. Com 18 vezes, perto do que se paga hoje pela Alphabet, o mesmo plano dá a cotação. O consenso está em $257,50 e a Morningstar em $70.</p>
+        <p>O modelo de caixa dá <b>$61,82</b> por ação, cerca de metade da cotação, porque cobra os anos de investimento pesado e avalia a SpaceX madura como uma empresa que já cresce devagar. A cotação só se justifica se, em 2035, o mercado ainda pagar por ela o múltiplo que hoje paga pela Oracle.</p>
       </div>
     </div>
   </section>
 
   <section>
     <span class="stag">Vinte e quatro anos</span>
-    <h2 class="stitle">De empresa de foguetões em 2002 <span class="accent">a 52% da receita em computação em 2026</span></h2>
+    <h2 class="stitle">Fundada para fazer foguetões, <span class="accent">a SpaceX tem hoje metade da receita na computação</span></h2>
     <p class="ssub">A SpaceX foi durante vinte anos uma empresa de foguetões que financiou uma rede de satélites. Em 2026 juntou-lhe um laboratório de inteligência artificial e uma rede social e entrou em bolsa, tudo em cinco meses.</p>
     <div class="twrap">
       <table class="pro">
@@ -1688,7 +1715,7 @@ body.rapido .rapid-pts{display:block}
 
   <section>
     <span class="stag">Enquadramento</span>
-    <h2 class="stitle">Lançamentos, Starlink e computação, <span class="accent">com 12%, 36% e 52% da receita</span></h2>
+    <h2 class="stitle">A computação, comprada em fevereiro, <span class="accent">já é metade da receita</span></h2>
     <p class="bm-lead">A empresa desenha e fabrica quase tudo em casa, dos motores Raptor aos satélites e às antenas, e cobra de quatro formas diferentes: por missão, por subscrição mensal, por mês de capacidade reservada e por utilizador. Tem sede em Starbase, no Texas, e mais de 22.000 trabalhadores, nenhum com contrato coletivo. O exercício coincide com o ano civil.</p>
     <div class="snap-grid bm-facts">
       <div class="tile snap reveal" style="--sn:var(--azure)"><div class="l">Receita · exercício de 2025</div><div class="v">$18.674 M</div><div class="s">mais 33,2% do que em 2024</div></div>
@@ -1702,6 +1729,7 @@ body.rapido .rapid-pts{display:block}
       <article class="tile bm-card reveal acc-ion">
         <div class="bm-top"><span class="bm-seg">Space</span><span class="bm-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2c3 3 4 7 4 11l-1.5 4h-5L8 13c0-4 1-8 4-11z"/><path d="M8 13l-3 4 3.5.5M16 13l3 4-3.5.5M10.5 20.5h3"/></svg></span></div>
         <h3>Lançamentos e desenvolvimento</h3>
+        <p class="bm-how">A SpaceX é paga para levar cargas ao espaço, como satélites de empresas e de governos, mantimentos e astronautas para a estação espacial e missões militares. Cobra um preço fixo por missão. O primeiro andar do foguetão aterra e volta a voar, por isso cada lançamento lhe custa muito menos do que aos concorrentes. A margem de cada voo é boa, mas vai quase toda para desenvolver o Starship, maior e totalmente reutilizável, e por isso este negócio ainda dá prejuízo.</p>
         <div class="bm-big">≈90%</div>
         <div class="bm-bigl">da massa colocada em órbita no mundo, segundo Musk na conferência de outubro de 2026, com 170 lançamentos em 2025 e 2.213 toneladas</div>
         <dl class="bm-dl">
@@ -1713,6 +1741,7 @@ body.rapido .rapid-pts{display:block}
       <article class="tile bm-card reveal acc-teal">
         <div class="bm-top"><span class="bm-seg">Connectivity</span><span class="bm-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 11a13 13 0 0 1 18 0M6.5 14.5a8 8 0 0 1 11 0M10 18a3 3 0 0 1 4 0"/><path d="M12 21v.01"/></svg></span></div>
         <h3>Starlink</h3>
+        <p class="bm-how">A Starlink é um fornecedor de internet que usa satélites a baixa altitude em vez de cabos. O cliente compra uma antena, instala-a sozinho e paga uma mensalidade. A rede, depois de construída, serve mais um cliente quase sem custo extra, e por isso cada assinatura nova aumenta a margem. Aviões, navios, empresas e governos pagam mais pelo mesmo serviço, com contratos mais longos.</p>
         <div class="bm-big">13,6 M</div>
         <div class="bm-bigl">de subscritores consumidores a 30 de setembro de 2026, em 174 mercados, com $69 de receita média por mês</div>
         <dl class="bm-dl">
@@ -1724,6 +1753,7 @@ body.rapido .rapid-pts{display:block}
       <article class="tile bm-card reveal acc-violet">
         <div class="bm-top"><span class="bm-seg">Super Intelligence</span><span class="bm-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="6.5" rx="1.6"/><rect x="3" y="13.5" width="18" height="6.5" rx="1.6"/><path d="M7 7.2h.01M7 16.8h.01M11 7.2h6M11 16.8h6"/></svg></span></div>
         <h3>Computação alugada</h3>
+        <p class="bm-how">A SpaceX enche centros de dados de processadores e aluga a capacidade a empresas de inteligência artificial, que a usam para treinar e correr os seus modelos. O cliente paga uma mensalidade fixa por uma parte da potência, medida em watts. Enquanto faltar capacidade no mercado, o aluguer paga o equipamento em pouco tempo. O risco é o preço descer quando houver oferta e o cliente poder sair com 90 dias de aviso.</p>
         <div class="bm-big">$30 a $50 por watt</div>
         <div class="bm-bigl">ao ano, «ligeiramente acima» do topo desse intervalo, segundo o diretor financeiro a 20 de outubro de 2026, com um pagamento do investimento em menos de um ano</div>
         <dl class="bm-dl">
@@ -1735,6 +1765,7 @@ body.rapido .rapid-pts{display:block}
       <article class="tile bm-card reveal acc-violet">
         <div class="bm-top"><span class="bm-seg">Super Intelligence</span><span class="bm-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4V5z"/><path d="M8 10h8M8 13h5"/></svg></span></div>
         <h3>Grok, Cursor e X</h3>
+        <p class="bm-how">Os produtos de inteligência artificial da própria empresa são um assistente que responde e executa tarefas, um editor que ajuda os programadores a escrever código e a rede social X, que vive de publicidade e de assinaturas. Usam a mesma capacidade de computação que a empresa aluga a terceiros, e só compensam se renderem mais do que essa capacidade renderia alugada. A empresa não publica o resultado destes produtos em separado.</p>
         <div class="bm-big">$608 M</div>
         <div class="bm-bigl">de receita da Cursor entre 14 de agosto e 30 de setembro de 2026, e $538 M de publicidade na X no trimestre</div>
         <dl class="bm-dl">
@@ -1756,7 +1787,7 @@ body.rapido .rapid-pts{display:block}
 
   <section>
     <span class="stag">Receita</span>
-    <h2 class="stitle">De $18,7 mil M em 2025 <span class="accent">para ≈$48,6 mil M em 2026</span></h2>
+    <h2 class="stitle">A receita mais do que duplica em 2026, <span class="accent">puxada pela computação</span></h2>
     <p class="ssub">Só há contas auditadas desde 2023. A última barra soma os nove meses publicados e os $21,5 mil M que este modelo assume no 4.º trimestre, em linha com o objetivo de $100 mil M anualizados em dezembro.</p>
     <div class="grid-2">
       <div class="chart-card reveal">
@@ -1785,7 +1816,7 @@ body.rapido .rapid-pts{display:block}
 
   <section>
     <span class="stag">A variável própria</span>
-    <h2 class="stitle">1,7 GW ligados e ≈$48 mil M por ano <span class="accent">contratados à Anthropic e à Google</span></h2>
+    <h2 class="stitle">A Anthropic e a Google contrataram <span class="accent">≈$48 mil M por ano de computação</span></h2>
     <p class="ssub">A receita da computação é, em primeira aproximação, os gigawatts alugados vezes o preço por watt. A gestão publica os dois números, e o modelo desta análise parte deles.</p>
     <div class="grid-2">
       <div class="chart-card reveal">
@@ -1818,7 +1849,7 @@ body.rapido .rapid-pts{display:block}
 
   <section>
     <span class="stag">Últimos resultados</span>
-    <h2 class="stitle">Receita de $14,6 mil M no 3.º trimestre, <span class="accent">+161%, e $2,8 mil M de resultado operacional</span></h2>
+    <h2 class="stitle">No 3.º trimestre a receita cresceu 161%, <span class="accent">e a Starlink deu quase todo o lucro</span></h2>
     <p class="ssub">Comunicado de 20 de outubro e 10-Q de 22 de outubro de 2026. O lucro de $4.404 M inclui $1.223 M de ganhos fora da operação e um benefício fiscal de $390 M.</p>
     <div class="grid-2">
       <div class="twrap reveal" style="align-self:start">
@@ -1853,7 +1884,7 @@ body.rapido .rapid-pts{display:block}
 
   <section>
     <span class="stag">O ciclo</span>
-    <h2 class="stitle">Seis etapas do foguetão ao centro de dados, <span class="accent">cinco já cumpridas</span></h2>
+    <h2 class="stitle">Cinco das seis etapas do plano estão cumpridas, <span class="accent">falta a computação em órbita</span></h2>
     <p class="ssub">Seis etapas, com o facto que suporta cada uma. É o argumento central do prospeto. As cinco primeiras etapas já aconteceram, e a sexta é sobretudo plano.</p>
     <div class="flywheel reveal">
       <div class="fw-step"><h4>Foguetões reutilizáveis</h4><p>O Falcon baixou o custo de um lançamento de milhares de milhões para dezenas de milhões, segundo o prospeto. Em 2025 foram 170 lançamentos, a maioria para a própria empresa.</p></div>
@@ -1912,7 +1943,7 @@ body.rapido .rapid-pts{display:block}
 
   <section id="jr-elenco">
     <span class="stag">As personagens</span>
-    <h2 class="stitle">Uma família, o operador <span class="accent">e três alternativas à Starlink</span></h2>
+    <h2 class="stitle">Os Carvalho não têm fibra, <span class="accent">e a Amazon Leo ainda não chegou</span></h2>
     <p class="ssub">Uma família ilustrativa, o operador da rede, a alternativa em terra, a nova concorrente em órbita e a operadora móvel que já é parceira. As regras são as do prospeto, dos comunicados e das páginas de preços de 2026.</p>
     <div class="jr-cast">
       <div class="tile jr-person reveal"><span class="av" style="--av:var(--ion)">C</span><b>Os Carvalho, os clientes</b><span>Família de origem portuguesa com uma quinta de amêndoa e um pequeno negócio de vendas online · Vale de San Joaquin, Califórnia</span></div>
@@ -1925,7 +1956,7 @@ body.rapido .rapid-pts{display:block}
 
   <section id="jr-mapa">
     <span class="stag">O mapa</span>
-    <h2 class="stitle">Dez decisões do cliente, <span class="accent">cada uma ligada a uma linha das contas</span></h2>
+    <h2 class="stitle">Cada decisão da família <span class="accent">aparece numa linha das contas da SpaceX</span></h2>
     <p class="ssub">Cada momento é uma decisão do cliente ou uma etapa do serviço, e cada um corresponde a uma linha das contas da SpaceX. Toque num momento para saltar para ele.</p>
     <ol class="jr-map">
       <li><button type="button" data-jump="jr-1"><span class="n">1</span><b>O problema</b><small>fev 2026</small></button></li>
@@ -1943,7 +1974,7 @@ body.rapido .rapid-pts{display:block}
 
   <section id="jr-historia">
     <span class="stag">A história</span>
-    <h2 class="stitle">Dez meses de internet dos Carvalho, <span class="accent">de fevereiro a dezembro de 2026</span></h2>
+    <h2 class="stitle">Os Carvalho pagam $85 por mês <span class="accent">e ficam porque não há alternativa</span></h2>
     <p class="ssub">Ao lado de cada momento há uma ilustração esquemática do ecrã que a família vê. Não são capturas de produtos reais, e os valores marcados como ilustrativos são inventados.</p>
     <div class="jr-wrap">
       <div class="jr-stage" aria-hidden="true">
@@ -2183,7 +2214,7 @@ body.rapido .rapid-pts{display:block}
 
   <section id="jr-clientes">
     <span class="stag">Os cinco clientes</span>
-    <h2 class="stitle">A família é uma de 13,6 M; <span class="accent">o laboratório de IA vale 34,5% da receita</span></h2>
+    <h2 class="stitle">Cinco tipos de cliente, <span class="accent">e um laboratório de IA pesa mais do que todas as famílias</span></h2>
     <p class="ssub">Os Carvalho representam um só dos cinco tipos de quem paga à SpaceX. Os outros quatro compram outros serviços, com outros contratos, e o peso de cada um na receita varia muito.</p>
     <div class="twrap reveal">
       <table class="pro">
@@ -2307,7 +2338,7 @@ body.rapido .rapid-pts{display:block}
 
   <section>
     <span class="stag">Ponto de partida</span>
-    <h2 class="stitle">Margem da Starlink de 12,1% em 2023 <span class="accent">para 45,1% no 3.º trimestre</span></h2>
+    <h2 class="stitle">A margem da Starlink quase quadruplicou desde 2023 <span class="accent">com a escala da rede</span></h2>
     <div class="prose reveal">
       <p>Os retornos da empresa no seu conjunto ainda não servem de prova, porque o resultado operacional foi negativo em dois dos três anos auditados e o capital investido mudou de escala em 2026. O sinal aparece por segmento. A Starlink quase duplicou a margem em dois anos, com menos receita por cliente, o que só é possível se o custo de servir cada cliente cair mais depressa do que o preço. Esse é o sinal clássico de uma vantagem de custo e de escala. O Space mostra o contrário nas contas e o mesmo na prática: tem prejuízo porque gasta $1.225 M por trimestre em investigação e desenvolvimento, sobretudo no Starship, e mesmo assim a margem bruta dos lançamentos é de 75,4% no 3.º trimestre.</p>
     </div>
@@ -2333,7 +2364,7 @@ body.rapido .rapid-pts{display:block}
 
   <section>
     <span class="stag">As fontes da vantagem</span>
-    <h2 class="stitle">Cinco vantagens, <span class="accent">de muito forte na reutilização a fraca nos modelos</span></h2>
+    <h2 class="stitle">A reutilização dos foguetões é a vantagem mais forte, <span class="accent">os modelos de IA a mais fraca</span></h2>
     <div class="pillar reveal">
       <div class="pillar-head"><h3>1 · A reutilização dos foguetões</h3><div class="strength">Muito forte<div class="bar"><i data-w="94"></i></div></div></div>
       <p>A SpaceX aterrou o primeiro andar de um foguetão orbital em 2015, e o prospeto diz que isso lhe deu pelo menos dez anos de avanço. Em 2025 voou 170 vezes e colocou 2.213 toneladas em órbita. Musk diz que tem quase 90% da massa colocada no mundo, a China 6% e o resto do mundo 4%. O custo marginal de um voo é baixo, e isso permite um ritmo que nenhum rival acompanha, com uma cadência que torna a empresa o fornecedor de quase todos, incluindo concorrentes como a Amazon Leo, que comprou lançamentos do Falcon 9.</p>
@@ -2371,7 +2402,7 @@ body.rapido .rapid-pts{display:block}
 
   <section>
     <span class="stag">Onde não há moat</span>
-    <h2 class="stitle">Aluguer de GPU, publicidade na X e órbita, <span class="accent">ainda sem vantagem provada</span></h2>
+    <h2 class="stitle">No aluguer de GPU e na publicidade da X <span class="accent">a SpaceX ainda não tem vantagem provada</span></h2>
     <div class="grid-3">
       <div class="tile card reveal"><h4>O aluguer de GPU em si</h4><p>É um produto indiferenciado em tempos normais. A CoreWeave negoceia a 8,5 vezes a receita, com margem operacional de −0,5% e dívida líquida de 11,9 vezes o EBITDA, e a ação perdeu 47,3% em doze meses, até 20 de novembro. O mercado trata assim um negócio de aluguer sem mais nada à volta.</p></div>
       <div class="tile card reveal"><h4>A publicidade na X</h4><p>Rendeu $538 M no trimestre, mais 18,5%, e $1,25 mil M em nove meses, abaixo dos $1,32 mil M de 2025. É um negócio muito menor do que os da Meta ou da Google e está sujeito a processos na Europa ao abrigo do regulamento dos serviços digitais.</p></div>
@@ -2385,7 +2416,7 @@ body.rapido .rapid-pts{display:block}
 
   <section>
     <span class="stag">Síntese</span>
-    <h2 class="stitle">Moat largo em órbita, <span class="accent">estreito nos 44% da receita em computação alugada</span></h2>
+    <h2 class="stitle">Vantagem larga em órbita <span class="accent">e estreita na computação alugada</span></h2>
     <div class="twrap reveal">
       <table class="pro">
         <thead><tr><th>Linha</th><th class="num">Receita 3T26</th><th class="num">% do total</th><th>Moat</th><th>Tendência</th><th>Principal ameaça</th></tr></thead>
@@ -2449,7 +2480,7 @@ body.rapido .rapid-pts{display:block}
 
   <section>
     <span class="stag">Enquadramento</span>
-    <h2 class="stitle">Quase 90% da massa em órbita <span class="accent">e 51,1 vezes a receita em bolsa</span></h2>
+    <h2 class="stitle">Sem rival à escala em órbita <span class="accent">e a mais cara do grupo face à receita</span></h2>
     <div class="prose reveal">
       <p>O prospeto estima um mercado acessível de <b>$28,5 biliões</b>: $370 mil M em espaço, $1,6 biliões em ligação (dos quais $870 mil M em banda larga e $740 mil M em telemóvel) e $26,5 biliões em inteligência artificial, dos quais $22,7 biliões em aplicações empresariais. O próprio prospeto avisa que estas estimativas são incertas. Os $22,7 biliões em aplicações empresariais equivalem a cerca de três quartos do PIB anual dos Estados Unidos, por isso medem o tamanho do argumento comercial, sem dizer quanto a empresa pode captar.</p>
     </div>
@@ -2475,7 +2506,7 @@ body.rapido .rapid-pts{display:block}
 
   <section>
     <span class="stag">Os rivais</span>
-    <h2 class="stitle">Em órbita, rivais muito mais pequenos; <span class="accent">na computação, a Alphabet vale quase o dobro</span></h2>
+    <h2 class="stitle">Rivais pequenos em órbita <span class="accent">e maiores na computação</span></h2>
     <div class="grid-2">
       <div class="rival reveal" style="--rv:var(--azure)">
         <div class="r-head"><h3>Rocket Lab</h3><span class="tag t-warn">Lançamentos</span></div>
@@ -2545,7 +2576,7 @@ body.rapido .rapid-pts{display:block}
 
   <section>
     <span class="stag">As frentes</span>
-    <h2 class="stitle">Duas frentes para atacar <span class="accent">e duas para defender</span></h2>
+    <h2 class="stitle">Na internet e no telemóvel a SpaceX ataca, <span class="accent">na computação e no Grok enfrenta rivais maiores</span></h2>
     <div class="grid-2">
       <div class="tile card reveal"><h4>O céu rural contra a fibra urbana</h4><p>A Starlink ganha onde não há fibra. Para crescer nas cidades precisa da capacidade dos satélites V3 e de preços competitivos com a fibra. Em 2026 os preços base subiram nos Estados Unidos, e o crescimento do 3.º trimestre veio de mercados desenvolvidos.</p></div>
       <div class="tile card reveal"><h4>O telemóvel, parceiro e rival</h4><p>Com 65 MHz da EchoStar e até 14 MHz da Grain, a SpaceX prepara serviço próprio no início de 2028. As operadoras, que a usam para cobrir zonas sem rede, têm $740 mil M de mercado a defender e apoiam a AST. A banda baixa serve para entrar nos edifícios, e os analistas continuam a perguntar como é que a rede vai competir com as das operadoras.</p></div>
@@ -2601,7 +2632,7 @@ body.rapido .rapid-pts{display:block}
 
   <section>
     <span class="stag">A equipa</span>
-    <h2 class="stitle">Musk dirige desde 2002 <span class="accent">e decide com 84,4% dos votos</span></h2>
+    <h2 class="stitle">Musk, Shotwell e Johnsen dirigem a empresa <span class="accent">há pelo menos quinze anos</span></h2>
     <div class="twrap reveal">
       <table class="pro">
         <thead><tr><th>Nome e cargo</th><th>Desde</th><th>Percurso</th></tr></thead>
@@ -2625,7 +2656,7 @@ body.rapido .rapid-pts{display:block}
 
   <section>
     <span class="stag">O historial</span>
-    <h2 class="stitle">≈90% da massa em órbita e 13,6 M de clientes, <span class="accent">quase sempre depois das datas prometidas</span></h2>
+    <h2 class="stitle">A gestão cumpre o que promete, <span class="accent">quase sempre mais tarde do que anuncia</span></h2>
     <div class="grid-3">
       <div class="tile card reveal"><div class="big">≈90%</div><h4>da massa em órbita</h4><p>Partiu de zero em 2002, reutilizou o primeiro foguetão em 2015 e leva quase toda a massa do mundo. Foi a meta que lhe disseram ser impossível, e cumpriu-a anos depois do previsto.</p></div>
       <div class="tile card reveal"><div class="big">13,6 M</div><h4>subscritores da Starlink</h4><p>A rede começou em 2020 e tinha 2,3 M de clientes em 2023. A margem operacional do segmento subiu para 45,1%. É a prova mais recente de capacidade de execução em escala.</p></div>
@@ -2639,7 +2670,7 @@ body.rapido .rapid-pts{display:block}
 
   <section>
     <span class="stag">Alocação de capital</span>
-    <h2 class="stitle">Capex de $48,1 mil M em nove meses, <span class="accent">3,7 vezes a caixa gerada</span></h2>
+    <h2 class="stitle">A empresa investe quase quatro vezes <span class="accent">o que a operação gera</span></h2>
     <p class="ssub">Três anos de contas e nove meses de 2026. A entrada em bolsa e as dívidas pagaram o investimento: não houve dividendo, e as recompras foram sobretudo a antigos acionistas antes da oferta.</p>
     <div class="grid-2">
       <div class="chart-card reveal">
@@ -2673,7 +2704,7 @@ body.rapido .rapid-pts{display:block}
 
   <section>
     <span class="stag">Remuneração</span>
-    <h2 class="stitle">$54.080 de salário <span class="accent">e 1.302 M de ações ligadas a Marte</span></h2>
+    <h2 class="stitle">Musk recebe $54.080 de salário <span class="accent">e um prémio ligado a Marte e à computação no espaço</span></h2>
     <div class="prose reveal">
       <p>Em 2025, Musk recebeu <b>$54.080</b> de salário, sem opções nem ações novas. Shotwell recebeu <b>$85,8 M</b>, dos quais $83,0 M em opções avaliadas na data da concessão, e Johnsen <b>$9,84 M</b>, com $9,0 M em opções. O peso das opções explica-se por um mercado privado em que a remuneração estava quase toda em capital.</p>
       <p>Em 2026 o conselho concedeu a Musk <b>1.302,07 M de ações Classe B restritas</b>, com direito de voto desde já, em duas partes. 1.000 M vestem em 15 parcelas iguais, se a capitalização atingir patamares definidos e se a empresa criar uma colónia permanente em Marte com pelo menos um milhão de habitantes. 302,07 M vestem em 12 parcelas, com outros patamares de capitalização e centros de dados fora da Terra capazes de 100 TW de computação por ano. Todas exigem que Musk continue na empresa até à certificação pelo conselho. O prémio dá-lhe voto desde já, e o dinheiro só muito depois, se vier. A $127,79, as 1.302 M de ações valem $166,4 mil M. O modelo desta análise tira-as da contagem, porque as condições estão muito para lá do horizonte de avaliação.</p>
@@ -2691,7 +2722,7 @@ body.rapido .rapid-pts{display:block}
 
   <section>
     <span class="stag">Estrutura acionista</span>
-    <h2 class="stitle">Musk tem 44,7% do capital <span class="accent">e 84,4% dos votos</span></h2>
+    <h2 class="stitle">Musk tem menos de metade do capital <span class="accent">e a maioria dos votos</span></h2>
     <div class="grid-2">
       <div class="chart-card reveal">
         <h4>Capital por acionista</h4>
@@ -2725,7 +2756,7 @@ body.rapido .rapid-pts{display:block}
 
   <section>
     <span class="stag">Partes relacionadas</span>
-    <h2 class="stitle">$12,9 mil M de dívida a um administrador <span class="accent">e $480 M de compras à Tesla</span></h2>
+    <h2 class="stitle">A SpaceX deve $12,9 mil M <span class="accent">ao fundo de um dos seus administradores</span></h2>
     <div class="grid-3">
       <div class="tile card reveal"><h4>A possível fusão com a Tesla</h4><p>Musk confirmou a 20 de outubro que a SpaceX e a Tesla criaram <b>comissões especiais</b> de administradores independentes, a pedido de acionistas, sem acordo nos termos. A 12 de novembro a Bloomberg noticiou que as conversas avançam. A Tesla vale <b>$1,37 biliões</b> a 20 de novembro, 79% da SpaceX. A conta da troca está na secção seguinte.</p></div>
       <div class="tile card reveal"><h4>Valor, de Antonio Gracias</h4><p>Uma subsidiária do grupo arrenda equipamento de computação à Valor. A operação conta como dívida, porque a venda e arrendamento não cumpre as regras contabilísticas, e soma <b>$12.897 M</b> a 30 de setembro, com <b>$864 M de juros em nove meses</b>. O custo implícito, ≈13% ao ano sobre o saldo médio, é muito superior aos 5,855% das notas sénior, e o credor é um administrador.</p></div>
@@ -2746,11 +2777,42 @@ body.rapido .rapid-pts{display:block}
       </div>
       <div class="mh-t">
         <span class="stag">Fusão com a Tesla</span>
-        <h2 class="stitle">Numa fusão ao preço de mercado, <span class="accent">o lucro por ação de 2027 cai 31,4%</span></h2>
+        <h2 class="stitle">Uma fusão com a Tesla ao preço de mercado <span class="accent">cortaria 31,4% ao lucro por ação de 2027</span></h2>
       </div>
     </div>
-    <p class="ssub">Não há acordo nem termos públicos. As duas empresas criaram comissões especiais de administradores independentes, e a 12 de novembro a Bloomberg noticiou que a negociação já vai no preço e no controlo, que um dos obstáculos é separar o negócio da Tesla na China e que o anúncio pode surgir em dezembro ou no início de 2027. Esta secção faz a conta de uma troca de ações aos preços de 20 de novembro, com os números do modelo e o consenso da Tesla, para medir o que mudaria para o acionista da SpaceX.</p>
-    <div class="grid-2">
+    <p class="ssub">Não há acordo nem termos públicos. As contas abaixo usam os preços de 20 de novembro, o cenário base deste modelo e o consenso da Tesla, sem sinergias nem custos da operação.</p>
+
+    <div class="mg-status" role="list" aria-label="Estado da negociação">
+      <div role="listitem"><span>20 de outubro de 2026</span><b>Comissões especiais nas duas empresas</b><em>Musk disse que a fusão seria boa ideia e que a decisão é das comissões.</em></div>
+      <div role="listitem"><span>Do lado da Tesla</span><b>50% de todas as ações</b><em>têm de votar a favor. Do lado da SpaceX, Musk tem 84,4% dos votos.</em></div>
+      <div role="listitem"><span>3 de dezembro</span><b>Assembleia da Tesla sem a fusão</b><em>três pontos na agenda, nenhum sobre a fusão.</em></div>
+      <div role="listitem"><span>Bloomberg, 12 de novembro</span><b>Anúncio em dezembro ou no início de 2027</b><em>a negociação já vai no preço e no controlo, e separar a China é um obstáculo.</em></div>
+    </div>
+
+    <div class="mg-step"><span class="mg-n">1</span><h3>Musk defende a fusão, mas o voto da Tesla e os reguladores podem travá-la</h3></div>
+    <div class="grid-2 fx-grid">
+      <div class="callout teal reveal" style="margin-top:0">
+        <h4>A fusão juntaria tecnologia, clientes e o controlo de Musk</h4>
+        <ul class="fx-list">
+          <li><b>Tecnologia em comum.</b> Na conferência de 20 de outubro, Musk disse ver «muito mérito» em juntar as empresas e apontou o software de inteligência artificial, o desenho de chips, a Terafab (a fábrica de chips que as duas anunciaram em março de 2026), a robótica e a capacidade em órbita.</li>
+          <li><b>Menos conflitos de interesse.</b> Hoje, cada engenheiro, peça ou contrato que passa de uma empresa para a outra é uma operação com parte relacionada, que tem de ser divulgada e pode dar processos. Numa só empresa deixa de ser. É o argumento da Morningstar, em junho.</li>
+          <li><b>Clientes uma da outra.</b> A Tesla pode comprar à SpaceX a computação para a condução autónoma e para o robô Optimus, a Starlink pode ligar os robotáxis e as baterias da Tesla podem servir os centros de dados.</li>
+          <li><b>Controlo.</b> Musk tem dito que não quer fazer da Tesla uma empresa de IA e robótica sem pelo menos 25% dos votos. Na empresa combinada teria 37,5% do capital, e o Barclays estima cerca de 56% dos votos.</li>
+        </ul>
+      </div>
+      <div class="callout rose reveal" style="margin-top:0">
+        <h4>O voto da Tesla, os reguladores e o preço podem travá-la</h4>
+        <ul class="fx-list">
+          <li><b>O voto da Tesla.</b> É preciso o voto favorável de metade de todas as ações, não só das que votam. Musk chamou-lhe «uma barreira bastante alta».</li>
+          <li><b>Musk dos dois lados.</b> Afastou-se das discussões das comissões por conflito de interesses. Ira Ehrenpreis é administrador nas duas empresas, e a Tesla já é acionista da SpaceX, com $2,0 mil M investidos na xAI e convertidos em ações em março de 2026.</li>
+          <li><b>Reguladores.</b> A operação da Tesla na China é um obstáculo apontado pelo JPMorgan e pela Bloomberg, e o trabalho da SpaceX para a defesa americana levanta questões de segurança nacional.</li>
+          <li><b>O preço.</b> A Tesla negoceia a 160 vezes o lucro de 2027. Dan Ives, da Wedbush, disse à CBS que os acionistas da Tesla iam pedir $500 a $550 por ação, um prémio de 45% a 59%. Com 45%, o lucro por ação da SpaceX em 2027 cairia 42,2%.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mg-step"><span class="mg-n">2</span><h3>Ao preço de mercado, cada ação da Tesla vale 2,706 ações da SpaceX</h3></div>
+    <div class="grid-2 mg-pair">
       <div class="twrap reveal" style="align-self:start">
         <table class="pro narrow">
           <thead><tr><th>A 20 de novembro de 2026</th><th class="num">SpaceX</th><th class="num"><svg class="tesla-t" viewBox="0 0 278.672 300" role="img" aria-label="Tesla"><g fill="#E82127"><path transform="translate(-33.796,-64.797)" d="m173.146 317.299 35.476-199.519c33.815 0 44.481 3.708 46.021 18.843 0 0 22.684-8.458 34.125-25.636-44.646-20.688-89.505-21.621-89.505-21.621l-26.176 31.882 0.059-4e-3 -26.176-31.883s-44.86 0.934-89.5 21.622c11.431 17.178 34.124 25.636 34.124 25.636 1.549-15.136 12.202-18.844 45.79-18.868l35.762 199.548"/><path transform="translate(-33.796,-64.797)" d="m173.132 80.157c36.09-0.276 77.399 5.583 119.687 24.014 5.652-10.173 7.105-14.669 7.105-14.669-46.227-18.289-89.518-24.548-126.797-24.705-37.277 0.157-80.566 6.417-126.787 24.705 0 0 2.062 5.538 7.1 14.669 42.28-18.431 83.596-24.29 119.687-24.014h5e-3"/></g></svg>Tesla</th></tr></thead>
@@ -2768,20 +2830,20 @@ body.rapido .rapid-pts{display:block}
         </table>
         <div class="tfoot-note">SpaceX: ações da capa do 10-Q, lucro por ação do cenário base deste modelo, caixa líquida a 30 de setembro. Tesla: ações da capa do 10-Q do 3.º trimestre, lucro por ação do consenso sobre 3.577 M de ações diluídas, caixa e dívida do Pludata a 20 de novembro. Musk na Tesla com as 423,7 M de ações restritas do prémio de 2025; na SpaceX com as ações B restritas e sem as opções.</div>
       </div>
-      <div class="stack">
-        <div class="callout reveal" style="margin-top:0">
-          <h4>Sem termos, sem voto marcado e com um administrador nas duas empresas</h4>
-          <p>Musk confirmou a 20 de outubro as comissões especiais, disse que a fusão seria boa ideia e que, do lado da Tesla, exige o voto de 50% de todas as ações. Do lado da SpaceX, ele tem 84,4% dos votos. A assembleia anual da Tesla, a 3 de dezembro, tem três pontos na agenda (eleger três administradores, o voto consultivo sobre a remuneração e o auditor), e nenhum é a fusão. Ira Ehrenpreis é administrador das duas empresas. A Tesla já é acionista da SpaceX: investiu $2,0 mil M na xAI, convertidos em ações A a 12 de março de 2026. As duas empresas estão registadas no Texas.</p>
+      <div class="mg-swap reveal">
+        <div class="mg-k">
+          <div><span>Ações SpaceX por ação Tesla</span><b>2,706</b></div>
+          <div><span>Acionistas atuais da SpaceX</span><b>55,9%</b></div>
+          <div><span>EPS de 2027</span><b>$3,20 → $2,19</b><i class="dn">−31,4%</i></div>
+          <div><span>Musk no capital</span><b>37,5%</b><i>contra 44,7% hoje</i></div>
         </div>
-        <div class="callout warn reveal" style="margin-top:0">
-          <h4>O que muda no risco de quem tem ações da SpaceX</h4>
-          <p>Em receita dos últimos doze meses a Tesla seria 76% da empresa combinada, e em lucro de 2027 só 15%. Traz $103,6 mil M de receita com 3,0% de margem operacional, e a sua cotação depende sobretudo de negócios ainda sem receita relevante, como o robotáxi e o robô Optimus. O peso de um só cliente de computação desce, e entram os riscos do automóvel: preços, tarifas e concorrência chinesa nos elétricos. Musk passaria a ter 37,5% do capital da empresa combinada, contra 44,7% da SpaceX hoje. O voto dele na SpaceX decide sozinho desse lado; a proteção do acionista A fica nas comissões especiais e numa avaliação independente da troca, que ainda não existe.</p>
-        </div>
+        <p class="mg-txt">A SpaceX emite ações novas para os acionistas da Tesla. Sem prémio, o valor a preços de mercado não muda, mas o lucro por ação desce, porque a Tesla traz muita cotação e pouco lucro.</p>
+        <div class="eps-calc"><b>A conta do EPS de 2027, ao preço de mercado.</b> ($42,9 mil M de lucro da SpaceX no cenário base + $7,7 mil M da Tesla no consenso) ÷ (13.418 M de ações da SpaceX + 9.680 M de ações novas) = <b>$2,19</b>, contra $3,20 sem fusão, ou −31,4%. As 9.680 M são as 3.577 M de ações diluídas da Tesla vezes 2,706. As 10.696 M de ações novas da tabela são todas as ações da Tesla trocadas, incluindo as 423,7 M restritas de Musk, que ficam fora do EPS, tal como as restritas dele na SpaceX.</div>
       </div>
     </div>
 
-    <h3 style="font-size:1.15rem;margin:30px 0 14px">A troca de ações com quatro prémios</h3>
-    <div class="twrap reveal">
+    <div class="mg-step"><span class="mg-n">3</span><h3>Com um prémio de 30% para a Tesla, o lucro por ação de 2027 cairia 39,1%</h3></div>
+    <div class="twrap reveal mg-prem">
       <table class="pro">
         <thead><tr><th>Prémio à Tesla</th><th class="num">Rácio de troca</th><th class="num">Ações novas (M)</th><th class="num">Atuais da SpaceX</th><th class="num">Valor a mercado</th><th class="num">EPS 2027</th><th class="num">Musk</th><th class="num">Tesla neutra se valer</th></tr></thead>
         <tbody>
@@ -2791,20 +2853,49 @@ body.rapido .rapid-pts{display:block}
           <tr><td>+30%</td><td class="num">3,518</td><td class="num">13.905</td><td class="num">49,4%</td><td class="num neg">−11,7%</td><td class="num">$1,95 (−39,1%)</td><td class="num">36,5%</td><td class="num">63% do preço</td></tr>
         </tbody>
       </table>
-      <div class="tfoot-note">Rácio de troca: ações SpaceX por ação Tesla; ao preço de mercado, $345,82 ÷ $127,79 = 2,706. Ações novas sobre as 3.952,6 M da Tesla. «Atuais da SpaceX»: parte da empresa combinada que fica com os acionistas atuais, sobre as 13.581 M da capa. «Musk»: a sua parte no capital combinado. «Valor a preços de mercado»: variação do valor por ação da SpaceX se as duas empresas valerem a sua capitalização, sem sinergias; com prémios de 15% e 30% seriam precisas sinergias de $205 e $410 mil M, em valor atual, para o acionista da SpaceX ficar igual. EPS combinado: lucro de 2027 do cenário base ($42,9 mil M) mais o do consenso da Tesla ($7,7 mil M), a dividir pelas ações diluídas das duas, e entre parênteses a variação face aos $3,20 sem fusão. «Tesla neutra se valer»: a fração da capitalização que a Tesla teria de valer para a troca não mudar o valor por ação da SpaceX dado pelo DCF ($61,82).</div>
+      <div class="tfoot-note">Rácio de troca: ações SpaceX por ação Tesla; ao preço de mercado, $345,82 ÷ $127,79 = 2,706. Ações novas: todas as 3.952,6 M de ações da Tesla vezes o rácio. «Atuais da SpaceX»: parte da empresa combinada que fica com os acionistas atuais. «Valor a mercado»: variação do valor por ação se as duas empresas valerem a sua capitalização, sem sinergias; com prémios de 15% e 30% seriam precisas sinergias de $205 e $410 mil M para o acionista da SpaceX ficar igual. «Tesla neutra se valer»: a fração da capitalização que a Tesla teria de valer para a troca não mudar o valor dado pelo DCF ($61,82).</div>
     </div>
-    <div class="grid-2" style="margin-top:18px">
-      <div class="callout rose reveal" style="margin-top:0">
-        <h4>Trocar 40 vezes o lucro por 160 vezes dilui um terço</h4>
-        <p>A SpaceX negoceia a 40 vezes o lucro de 2027 deste modelo e a Tesla a 160 vezes o do consenso. Numa troca ao preço de mercado, os acionistas da SpaceX ficam com 55,9% da empresa combinada e trazem 85% do lucro de 2027, $42,9 de $50,6 mil M. O lucro por ação cai 31,4%, de $3,20 para $2,19. Para a troca não diluir, o lucro da Tesla em 2027 teria de ser quatro vezes o do consenso.</p>
+    <div class="callout rose reveal">
+      <h4>Cada prémio pago à Tesla aumenta a diluição</h4>
+      <p>A Tesla negoceia a 160 vezes o lucro de 2027 do consenso e a SpaceX a 40 vezes o deste modelo. Os acionistas da SpaceX ficam com 55,9% da empresa combinada e trazem 85% do lucro de 2027, $42,9 de $50,6 mil M. Para a troca não diluir, o lucro da Tesla em 2027 teria de ser quatro vezes o do consenso.</p>
+    </div>
+
+    <div class="mg-step"><span class="mg-n">4</span><h3>Um acionista com 100 ações mantém o valor e perde lucro por ação</h3></div>
+    <div class="grid-2 mg-pair">
+      <div class="twrap reveal" style="align-self:start">
+        <table class="pro narrow">
+          <thead><tr><th>100 ações</th><th class="num">Sem fusão</th><th class="num">Com fusão</th></tr></thead>
+          <tbody>
+            <tr><td>Ações da SpaceX</td><td class="num">100</td><td class="num">100</td></tr>
+            <tr><td>Valor a 20 de novembro</td><td class="num">$12.779</td><td class="num">$12.779</td></tr>
+            <tr><td>Lucro de 2027</td><td class="num">$320</td><td class="num neg">$219</td></tr>
+            <tr class="hl-row"><td>DCF, Tesla ao preço</td><td class="num">$6.182</td><td class="num pos">$9.134</td></tr>
+            <tr><td>DCF, Tesla a metade</td><td class="num">$6.182</td><td class="num">$6.275</td></tr>
+            <tr><td>DCF, Tesla a um quarto</td><td class="num">$6.182</td><td class="num neg">$4.845</td></tr>
+          </tbody>
+        </table>
+        <div class="tfoot-note">Troca ao preço de mercado, sem prémio, sinergias nem custos. «Tesla ao preço», «a metade» e «a um quarto»: o valor atribuído à Tesla face à sua capitalização. Com fusão, o valor pelo DCF soma o modelo de caixa da SpaceX e o valor atribuído à Tesla, a dividir pelas ações das duas.</div>
       </div>
-      <div class="callout teal reveal" style="margin-top:0">
-        <h4>Pelo modelo de caixa, a troca ao preço de mercado quase não altera o valor</h4>
-        <p>O DCF dá à SpaceX 48% da cotação, $61,82 contra $127,79. Numa troca ao preço de mercado, o acionista da SpaceX só perde valor, pelo modelo, se a Tesla valer menos de 48% do seu preço, $661 mil M. Se a Tesla valer o preço, o valor por ação dado pelo modelo sobe de $61,82 para $91,34, porque a SpaceX paga com ações cotadas a 2,07 vezes o valor do modelo. Com o valor dos múltiplos, $108,20 hoje, a Tesla teria de valer 85% do preço.</p>
+      <div class="callout reveal" style="margin-top:0">
+        <h4>Fica com as mesmas ações e passa a ter uma parte da Tesla</h4>
+        <p>Numa troca ao preço de mercado, quem tem ações da SpaceX não recebe nem perde ações. A SpaceX emite ações novas para os acionistas da Tesla, e cada ação passa a representar uma parte mais pequena de uma empresa maior. Aos preços de 20 de novembro, as 100 ações continuam a valer o mesmo.</p>
+        <p>O que muda é o que está por trás delas. O lucro de 2027 que lhes cabe desce de $320 para $219, porque a Tesla traz muita cotação e pouco lucro, e o valor pelo modelo de caixa passa a depender do que a Tesla valer. Do outro lado, quem tem 100 ações da Tesla receberia 270,6 ações da SpaceX ao preço de mercado, ou 311,2 com um prémio de 15%.</p>
       </div>
     </div>
 
-    <h3 style="font-size:1.15rem;margin:30px 0 14px">Calculadora da troca de ações</h3>
+    <div class="mg-step"><span class="mg-n">5</span><h3>Pelo modelo de caixa, a troca só tira valor se a Tesla valer menos de 48% do preço</h3></div>
+    <div class="grid-2 fx-grid">
+      <div class="callout teal reveal" style="margin-top:0">
+        <h4>Com a Tesla a valer o seu preço, o valor pelo DCF sobe para $91,34</h4>
+        <p>O DCF dá à SpaceX 48% da cotação, $61,82 contra $127,79. Numa troca ao preço de mercado, o acionista da SpaceX só perde valor, pelo modelo, se a Tesla valer menos de 48% do seu preço, $661 mil M. Se a Tesla valer o preço, o valor por ação dado pelo modelo sobe de $61,82 para $91,34, porque a SpaceX paga com ações cotadas a 2,07 vezes o valor do modelo. Com o valor dos múltiplos, $108,20 hoje, a Tesla teria de valer 85% do preço.</p>
+      </div>
+      <div class="callout warn reveal" style="margin-top:0">
+          <h4>O que muda no risco de quem tem ações da SpaceX</h4>
+          <p>Em receita dos últimos doze meses a Tesla seria 76% da empresa combinada, e em lucro de 2027 só 15%. Traz $103,6 mil M de receita com 3,0% de margem operacional, e a sua cotação depende sobretudo de negócios ainda sem receita relevante, como o robotáxi e o robô Optimus. O peso de um só cliente de computação desce, e entram os riscos do automóvel: preços, tarifas e concorrência chinesa nos elétricos. Musk passaria a ter 37,5% do capital da empresa combinada, contra 44,7% da SpaceX hoje. O voto dele na SpaceX decide sozinho desse lado; a proteção do acionista A fica nas comissões especiais e numa avaliação independente da troca, que ainda não existe.</p>
+        </div>
+    </div>
+    <div class="mg-step"><span class="mg-n">6</span><h3>Calculadora da troca de ações</h3></div>
+
     <div class="calc calc-tesla">
       <div class="calc-col">
       <div class="calc-panel">
@@ -2897,7 +2988,7 @@ body.rapido .rapid-pts{display:block}
 
   <section>
     <span class="stag">Rentabilidade</span>
-    <h2 class="stitle">Lucro de $4.404 M no 3.º trimestre, <span class="accent">com $1,6 mil M de fora da operação</span></h2>
+    <h2 class="stitle">Mais de um terço do lucro do trimestre <span class="accent">veio de fora da operação</span></h2>
     <div class="grid-2">
       <div class="chart-card reveal">
         <h4>Receita, resultado operacional e lucro</h4>
@@ -2925,7 +3016,7 @@ body.rapido .rapid-pts{display:block}
 
   <section>
     <span class="stag">Qualidade dos resultados</span>
-    <h2 class="stitle">Lucro positivo, <span class="accent">fluxo de caixa livre de −$39,2 mil M</span></h2>
+    <h2 class="stitle">A empresa dá lucro, <span class="accent">mas gasta muito mais caixa do que gera</span></h2>
     <div class="grid-2">
       <div class="chart-card reveal">
         <h4>Capex em percentagem da caixa da operação</h4>
@@ -2953,7 +3044,7 @@ body.rapido .rapid-pts{display:block}
 
   <section>
     <span class="stag">Balanço</span>
-    <h2 class="stitle">$89,9 mil M de caixa <span class="accent">contra $39,0 mil M de dívida e locações</span></h2>
+    <h2 class="stitle">Por agora há mais caixa <span class="accent">do que dívida</span></h2>
     <div class="grid-2">
       <div class="twrap reveal" style="align-self:start">
         <table class="pro narrow">
@@ -2987,7 +3078,7 @@ body.rapido .rapid-pts{display:block}
 
   <section>
     <span class="stag">Crédito</span>
-    <h2 class="stitle">BBB+ da Fitch, <span class="accent">com caixa líquida de $50,9 mil M</span></h2>
+    <h2 class="stitle">A Fitch dá grau de investimento, <span class="accent">e o modelo leva a dívida líquida a $250 mil M em 2029</span></h2>
     <div class="grid-3">
       <div class="tile card reveal"><h4>Notação</h4><p>A Fitch mantém BBB+, grau de investimento, e disse a 28 de outubro que o leasing de ≈$40 mil M financia capacidade já incluída nas suas previsões. A empresa diz que quer manter o grau de investimento e está a negociar com várias fontes de dívida.</p></div>
       <div class="tile card reveal"><h4>Dívida</h4><p>$25 mil M em notas com vencimentos entre 2031 e 2056, com taxa média de 5,855%; $12.979 M em financiamentos ligados a equipamento, sobretudo com a Valor; $983 M em locações financeiras. A dívida da X e da xAI foi paga, com custo de $1,5 mil M de extinção.</p></div>
@@ -3001,7 +3092,7 @@ body.rapido .rapid-pts{display:block}
 
   <section>
     <span class="stag">Pessoas</span>
-    <h2 class="stitle">Mais de 22.000 trabalhadores, <span class="accent">sem dividendo e com 1,2% de diluição ao ano</span></h2>
+    <h2 class="stitle">Sem dividendo <span class="accent">e com ações novas todos os anos</span></h2>
     <div class="grid-2">
       <div class="tile card reveal"><h4>Trabalhadores</h4><p>Mais de 22.000 a 31 de março de 2026, sem contratos coletivos. Receita por trabalhador anualizada de ≈$2,6 M no 3.º trimestre. A Cursor acrescentou uma pequena equipa com muito peso em ações. A cultura de trabalho intenso é uma vantagem declarada e um risco de retenção.</p></div>
       <div class="tile card reveal"><h4>Dividendo e recompras</h4><p>A SpaceX não paga dividendo, e o modelo não assume nenhum até 2030. As recompras de $4.426 M em 2026 foram feitas antes da oferta. Com o investimento em curso, não há sinal de retorno direto ao acionista nos próximos anos, e a remuneração em ações continua a diluir ≈1,2% ao ano neste modelo.</p></div>
@@ -3096,7 +3187,7 @@ body.rapido .rapid-pts{display:block}
 
   <section>
     <span class="stag">Os dois maiores</span>
-    <h2 class="stitle">O preço do watt <span class="accent">e um cliente com 34,5% da receita</span></h2>
+    <h2 class="stitle">Os dois riscos maiores, <span class="accent">o preço da computação e um cliente com um terço da receita</span></h2>
     <div class="grid-2">
       <div class="rc reveal">
         <h3>O preço da computação cai mais depressa</h3>
@@ -3137,7 +3228,7 @@ body.rapido .rapid-pts{display:block}
 
   <section>
     <span class="stag">Vigilância</span>
-    <h2 class="stitle">Seis números <span class="accent">que obrigam a rever o modelo</span></h2>
+    <h2 class="stitle">Abaixo de $30 por watt ou de $33 mil M de receita trimestral, <span class="accent">o modelo tem de ser revisto</span></h2>
     <div class="grid-3">
       <div class="tile card reveal"><h4>Preço por watt nas renovações</h4><p>A gestão citou «ligeiramente acima de $50». Abaixo de <b>$30</b> numa renovação relevante, o cenário base fica em causa. Divulgação: conferências de resultados.</p></div>
       <div class="tile card reveal"><h4>Receita do 1.º trimestre de 2027</h4><p>A guidance é de <b>$33 a $37 mil M</b>. Abaixo de $33 mil M, a receita de $180,7 mil M no modelo para 2027 deixa de ser credível. Sai em abril ou maio de 2027.</p></div>
@@ -3154,7 +3245,7 @@ body.rapido .rapid-pts{display:block}
 
   <section id="riscos-datas">
     <span class="stag">Calendário</span>
-    <h2 class="stitle">Doze datas <span class="accent">até junho de 2027</span></h2>
+    <h2 class="stitle">O fim do prazo fixo da Anthropic, em janeiro, <span class="accent">é a data que mais pesa até junho de 2027</span></h2>
     <p class="ssub">Os riscos do mapa têm datas em que se vão testar. A tabela junta as que já estão marcadas ou anunciadas, com o que cada uma pode mudar no modelo.</p>
     <div class="twrap reveal">
       <table class="pro">
@@ -3252,7 +3343,7 @@ body.rapido .rapid-pts{display:block}
 
   <section id="val-precos">
     <span class="stag">Fotografia do mercado</span>
-    <h2 class="stitle">$127,79, 5,3% abaixo da oferta, <span class="accent">contra $257,50 do consenso</span></h2>
+    <h2 class="stitle">A ação está 5,3% abaixo do preço da oferta <span class="accent">e a metade do alvo dos analistas</span></h2>
     <div class="grid-3">
       <div class="tile card reveal"><h4>Abaixo do preço da oferta</h4><p>A ação vale $127,79, 5,3% abaixo dos $135 da oferta de 11 de junho e 43,4% abaixo do máximo de $225,64, tocado a 16 de junho. O mínimo foi de $104,83, a 3 de agosto. Entre o máximo e o mínimo vão 2,2 vezes, em menos de dois meses.</p></div>
       <div class="tile card reveal"><h4>O lock-up e as eleições pesam no preço</h4><p>A 22 de outubro a libertação de 1,3 mil M de ações do lock-up coincidiu com uma queda de 9,1%. Depois das intercalares a ação caiu 3,8% a 4 de novembro e 9,1% a 5, com a Tesla a cair 3,3% e 10,8%. A 20 de novembro perdeu 7,7%, num dia de queda das ações ligadas à IA, na semana em que os bancos procuravam vender partes do financiamento de ≈$40 mil M dos GPU.</p></div>
@@ -3267,7 +3358,7 @@ body.rapido .rapid-pts{display:block}
 
   <section id="val-multiplos">
     <span class="stag">Múltiplos</span>
-    <h2 class="stitle">40 vezes o lucro de 2027, <span class="accent">contra 19,3 na Alphabet</span></h2>
+    <h2 class="stitle">A ação vale 40 vezes o lucro de 2027, <span class="accent">o dobro da Alphabet</span></h2>
     <p class="ssub">Os lucros de 2026 são ainda demasiado pequenos para servir de base, por isso as comparações fazem-se sobre 2027. O múltiplo depende muito da estimativa: 31,7 vezes sobre o lucro do consenso e 40,0 vezes sobre o deste modelo.</p>
     <div class="grid-2">
       <div class="twrap">
@@ -3298,7 +3389,7 @@ body.rapido .rapid-pts{display:block}
           <p class="cnote">A barra azul é a SpaceX, sobre 2027 e não sobre os próximos doze meses, o que lhe é favorável. A Tesla fica de fora porque, com 161,9 vezes, deixaria as outras barras ilegíveis; volta no capítulo de Gestão, na conta da fusão. CoreWeave, Rocket Lab e AST SpaceMobile não têm lucro previsto com significado.</p>
         </div>
         <div class="callout reveal" style="margin-top:0">
-          <h4>20,5 vezes o lucro de 2028, o dobro do valor do modelo de caixa</h4>
+          <h4>Sobre o lucro de 2028, o múltiplo aproxima-se dos pares</h4>
           <p>Sobre o lucro de 2027 do consenso, o P/E da SpaceX é 1,6 vezes o da Alphabet, que tem $157 mil M de resultado operacional, e o crescimento previsto é muito superior. Sobre o lucro de 2028 deste modelo, o P/E desce para 20,5 vezes, perto da Alphabet, se o lucro duplicar. Esse lucro depende de um preço por watt fixado num período de escassez, e é aí que os dois métodos abaixo se separam.</p>
         </div>
       </div>
@@ -3307,7 +3398,7 @@ body.rapido .rapid-pts{display:block}
 
   <section id="val-cenarios">
     <span class="stag">Três hipóteses</span>
-    <h2 class="stitle">Três cenários por múltiplos, <span class="accent">de $40,74 a $269,73 no fim de 2027</span></h2>
+    <h2 class="stitle">Por múltiplos, o cenário base fica 4,9% abaixo da cotação <span class="accent">no fim de 2027</span></h2>
     <p class="ssub">Cada cenário aplica um múltiplo de P/E ao lucro por ação estimado para 2027, e dá um preço para o fim desse ano. A linha de baixo traz o valor a hoje, a 11% ao ano, durante 1,11 anos.</p>
     <div class="scn-grid">
       <div class="scn bear reveal">
@@ -3385,7 +3476,7 @@ body.rapido .rapid-pts{display:block}
 
   <section id="val-2030">
     <span class="stag">Até 2030</span>
-    <h2 class="stitle">Até 2030, <span class="accent">de −30,0% a +48,5% ao ano</span></h2>
+    <h2 class="stitle">O cenário base rende 9,9% ao ano <span class="accent">até 2030</span></h2>
     <p class="ssub">A mesma projeção estendida a 2030, com o modelo por segmentos, com a receita de cada linha e os juros da dívida que o investimento exige. Estes são os valores das tabelas de projeção do relatório.</p>
     <div class="twrap">
       <table class="pro compact">
@@ -3417,7 +3508,7 @@ body.rapido .rapid-pts{display:block}
 
   <section id="val-dcf">
     <span class="stag">Fluxos de caixa descontados</span>
-    <h2 class="stitle">Seis passos <span class="accent">da receita ao valor por ação</span></h2>
+    <h2 class="stitle">O DCF desconta os fluxos a 11% ao ano <span class="accent">e dá $61,82 por ação</span></h2>
     <p class="ssub">Com $951 mil M de capex até 2030 e fluxo de caixa negativo até 2029, um múltiplo sobre o lucro de 2027 deixa de fora o que mais pesa no valor. O modelo de caixa segue cada etapa.</p>
 
     <div class="flywheel plain">
@@ -3432,7 +3523,7 @@ body.rapido .rapid-pts{display:block}
     <h3 style="font-size:1.15rem;margin:30px 0 14px">Os pressupostos que decidem o resultado</h3>
     <div class="aslist six">
       <div class="as-item" style="--as:var(--ion)"><div class="k">Custo do capital (WACC)</div><div class="v">11,0%</div><div class="d">4,91% de taxa sem risco mais 1,35 de beta vezes 5,0% de prémio de risco dá 11,66% de custo do capital próprio. Com 10% de dívida a 7,0%, o cálculo dá 11,05%.</div></div>
-      <div class="as-item" style="--as:var(--teal)"><div class="k">Crescimento perpétuo</div><div class="v">3,50%</div><div class="d">Acima da economia nominal de longo prazo, porque em 2035 a receita ainda cresce 7%, e abaixo da taxa sem risco de 4,91%.</div></div>
+      <div class="as-item" style="--as:var(--teal)"><div class="k">Crescimento perpétuo</div><div class="v">3,50%</div><div class="d">Abaixo dos ≈3,8% de crescimento nominal da economia americana depois de 2030 (1,8% real e 2% de inflação, segundo o CBO) e da taxa sem risco de 4,91%. Em 2035 a receita ainda cresce 7%. Com o reinvestimento desse ano, 3,5% dá 14,8% de retorno sobre o capital novo; 2,5% daria 10,6%, abaixo do custo do capital. Com 2,5% o valor seria $54,67.</div></div>
       <div class="as-item" style="--as:var(--azure)"><div class="k">Margem operacional terminal</div><div class="v">29,5%</div><div class="d">Depois da remuneração em ações. A média ponderada de 45% na Starlink, 26,5% na computação e software e 15% nos lançamentos. Foi de 19,1% no 3.º trimestre de 2026.</div></div>
       <div class="as-item" style="--as:var(--violet)"><div class="k">Receita de 2025 a 2035</div><div class="v">45,6% ao ano</div><div class="d">De $18,7 mil M para $801 mil M: $643 mil M na Super Intelligence, $140 mil M na Starlink e $18 mil M nos lançamentos, com 48 GW em 2035.</div></div>
       <div class="as-item" style="--as:var(--amber)"><div class="k">Preço por watt</div><div class="v">$48 a $19</div><div class="d">Ao ano, de 2027 a 2035. Começa perto dos contratos curtos de hoje e acaba no preço dos contratos de três e cinco anos assinados em 2026. $19 paga a depreciação, a energia e um retorno normal sobre $30 mil M por GW; a secção 10 compara a curva com os contratos da IREN.</div></div>
@@ -3471,7 +3562,7 @@ body.rapido .rapid-pts{display:block}
 
   <section id="val-projecao">
     <span class="stag">Projeção</span>
-    <h2 class="stitle">Dez períodos de fluxo de caixa, <span class="accent">negativos até 2029</span></h2>
+    <h2 class="stitle">O fluxo de caixa <span class="accent">só fica positivo em 2030</span></h2>
     <p class="ssub">A data de avaliação é 30 de setembro de 2026, o balanço mais recente. O primeiro período é o 4.º trimestre de 2026, seguido de nove exercícios. A tabela é o cenário base, e a calculadora abaixo recalcula tudo.</p>
     <div class="tscroll-hint">↔ Deslize a tabela na horizontal para ver todos os períodos.</div>
     <div class="twrap">
@@ -3521,7 +3612,7 @@ body.rapido .rapid-pts{display:block}
 
   <section id="val-ponte">
     <span class="stag">Valor por ação</span>
-    <h2 class="stitle">97,8% do valor <span class="accent">está no valor terminal</span></h2>
+    <h2 class="stitle">Quase todo o valor <span class="accent">está depois de 2035</span></h2>
     <p class="ssub">Os fluxos de 2026 a 2035 valem só $17,0 mil M; o resto é valor terminal. A caixa líquida de $50,9 mil M soma, e o total divide-se por 13.208 M de ações.</p>
     <div class="grid-2">
       <div class="chart-card reveal">
@@ -3561,7 +3652,7 @@ body.rapido .rapid-pts{display:block}
 
   <section id="val-saida">
     <span class="stag">Valor terminal</span>
-    <h2 class="stitle">A fórmula dá 8,3 vezes o resultado de 2035, <span class="accent">a cotação pede 18</span></h2>
+    <h2 class="stitle">A cotação pede 18 vezes o resultado de 2035, <span class="accent">mais do dobro da fórmula</span></h2>
     <p class="ssub">O valor terminal é 97,8% do total, por isso a pergunta decisiva é quanto o mercado pagará pela SpaceX no fim de 2035. A fórmula do crescimento perpétuo dá 8,3 vezes o resultado operacional desse ano, $236,2 mil M. As duas tabelas trocam a fórmula por um múltiplo explícito e por um custo do capital mais baixo depois de 2035, com os fluxos de 2026 a 2035 iguais.</p>
     <div class="grid-2">
       <div class="twrap">
@@ -3611,7 +3702,7 @@ body.rapido .rapid-pts{display:block}
 
   <section id="val-sens">
     <span class="stag">Sensibilidade</span>
-    <h2 class="stitle">Cada ponto de margem vale ≈$4 por ação, <span class="accent">cada ponto de crescimento ≈$4,6</span></h2>
+    <h2 class="stitle">Cada ponto de margem terminal <span class="accent">vale cerca de $4 por ação</span></h2>
     <p class="ssub">Quase tudo depende de três variáveis: o custo do capital, a margem operacional terminal e o crescimento da receita até 2035. Por cada ponto de margem, o valor muda ≈$4,04, e por cada ponto de crescimento anual ≈$4,56.</p>
 
     <h3 style="font-size:1.05rem;margin:0 0 12px">Custo do capital × crescimento perpétuo ($ por ação)</h3>
@@ -3674,7 +3765,7 @@ body.rapido .rapid-pts{display:block}
       </div>
       <div class="stack">
         <div class="callout rose reveal" style="margin-top:0">
-          <h4>90 GW no otimista contra 19 GW no pessimista</h4>
+          <h4>A distância entre os cenários está nos gigawatts e no preço</h4>
           <p>O otimista tem 90 GW e $1,9 biliões de receita em 2035, e o pessimista 19 GW e $299 mil M. A diferença de valor é de 15 vezes. Três variáveis estão por trás: os gigawatts que se conseguem ligar e alugar, o preço por watt depois de 2029 e a dimensão dos produtos próprios.</p>
         </div>
         <div class="callout reveal" style="margin-top:0">
@@ -3713,7 +3804,7 @@ body.rapido .rapid-pts{display:block}
         <p>Ao preço do cenário base, 36 GW em 2035 valem $62,08 por ação e 60 GW valem $61,55: a $19 por watt cada gigawatt novo paga o seu custo do capital e pouco mais. Com preços 20% mais baixos, mais gigawatts destroem valor, de $27,29 para $3,80. Com preços 20% mais altos criam, de $96,88 para $119,30. A meta de 13 GW de Musk só acrescenta valor se o preço se mantiver alto.</p>
       </div>
     </div>
-    <h3 style="font-size:1.05rem;margin:28px 0 12px">O preço por watt do modelo face aos contratos assinados em 2025 e 2026</h3>
+    <h3 style="font-size:1.05rem;margin:28px 0 12px">O preço de 2035 do modelo é o dos contratos longos assinados em 2026</h3>
     <div class="grid-2">
       <div class="twrap">
         <table class="pro narrow">
@@ -3742,7 +3833,7 @@ body.rapido .rapid-pts{display:block}
 
   <section id="val-mc">
     <span class="stag">Monte Carlo</span>
-    <h2 class="stitle">Em 10.000 combinações, <span class="accent">só 3,8% chegam à cotação</span></h2>
+    <h2 class="stitle">Em 10.000 simulações, <span class="accent">menos de 4% chegam à cotação</span></h2>
     <p class="ssub">O Monte Carlo sorteia os quatro pressupostos ao mesmo tempo, 10.000 vezes, à volta do cenário base, e mostra como se distribui o valor por ação.</p>
     <div class="grid-2">
       <div class="chart-card reveal">
@@ -3836,7 +3927,7 @@ body.rapido .rapid-pts{display:block}
 
   <section id="val-reverse">
     <span class="stag">Reverse DCF</span>
-    <h2 class="stitle">A cotação pede 56,2% de crescimento ao ano <span class="accent">ou 45,8% de margem</span></h2>
+    <h2 class="stitle">A cotação exige que a receita cresça 56% ao ano <span class="accent">até 2035</span></h2>
     <p class="ssub">Cada número abaixo é o valor que, sozinho e com o resto igual ao cenário base, leva o modelo de caixa aos $127,79.</p>
     <div class="revgrid">
       <div class="rev">
@@ -3872,7 +3963,7 @@ body.rapido .rapid-pts{display:block}
 
   <section id="val-ff">
     <span class="stag">Triangulação</span>
-    <h2 class="stitle">Oito intervalos de valor, <span class="accent">só os múltiplos rodeiam a cotação</span></h2>
+    <h2 class="stitle">Todos os métodos lado a lado, <span class="accent">e só os múltiplos chegam à cotação</span></h2>
     <p class="ssub">Sete métodos de avaliação e o consenso dos analistas dão oito intervalos de valor, e a linha tracejada marca a cotação de $127,79. Os métodos de caixa ficam quase todos abaixo, e os de múltiplos e a soma das partes rodeiam-na.</p>
     <div class="chart-card reveal">
       <h4>Os oito intervalos de valor</h4>
@@ -3904,7 +3995,7 @@ body.rapido .rapid-pts{display:block}
 
   <section id="val-retorno">
     <span class="stag">Decomposição</span>
-    <h2 class="stitle">+27,1% de lucro por ação ao ano, <span class="accent">−13,5% de múltiplo</span></h2>
+    <h2 class="stitle">O lucro por ação sobe 27% ao ano até 2030, <span class="accent">mas o múltiplo desce</span></h2>
     <p class="ssub">O retorno pode medir-se de duas formas. Uma decompõe o retorno anual estimado até 2030 no crescimento do lucro e na mudança de múltiplo. A outra é a taxa interna do modelo de caixa.</p>
     <div class="grid-2">
     <div class="chart-card reveal">
@@ -3914,7 +4005,7 @@ body.rapido .rapid-pts{display:block}
       <p class="cnote">Cada barra é uma componente do retorno anual estimado até ao fim de 2030, partindo do lucro de 2027. A barra de crescimento é grande porque o lucro quase triplica, de $3,20 para $8,56, e a de múltiplo é negativa porque o P/E desce de 40,0 para 22 vezes. Não há dividendo.</p>
     </div>
     <div class="callout reveal" style="margin-top:0">
-      <h4>Para 11% ao ano seriam precisas 22,9 vezes o lucro de 2030</h4>
+      <h4>Para render 11% ao ano, a ação teria de custar ≈$123 hoje</h4>
       <p>O lucro por ação cresce <b>27,1% ao ano</b> no cenário base, e o múltiplo <b>desce 13,5% ao ano</b>, porque o crescimento do lucro desce de 95% em 2028 para 9% em 2030. O resultado é um retorno de <b>9,9% ao ano</b>. Para chegar aos 11,0% exigidos, ou o preço de hoje teria de ser ≈$122,63, o valor trazido a hoje do cenário base de 2030, ou o múltiplo em 2030 teria de ser de 22,9 vezes em vez de 22.</p>
     </div>
     </div>
@@ -3924,7 +4015,7 @@ body.rapido .rapid-pts{display:block}
       <div class="tile card reveal"><div class="big">−2,3%</div><h4>ao ano · em caixa</h4><p>O fluxo de caixa livre de doze meses sobre a capitalização. Não há dividendo nem recompras, e a diluição é de ≈1,2% ao ano neste modelo.</p></div>
     </div>
     <div class="callout teal reveal">
-      <h4>9,9% pelos múltiplos e 8,06% pelo modelo de caixa</h4>
+      <h4>Os dois métodos dão retornos parecidos, abaixo dos 11% exigidos</h4>
       <p>Os dois retornos ficam perto, 9,9% pelos múltiplos e 8,06% pelo modelo de caixa. A diferença está no múltiplo final: 22 vezes o lucro de 2030 nos múltiplos, contra 11,1 vezes no valor que o modelo de caixa dá para esse ano. Os dois ficam abaixo dos 11,0% exigidos aqui e acima dos 4,91% da taxa sem risco. Com o otimista, o retorno a 2030 é de 48,5% ao ano, e com o pessimista de −30,0%.</p>
     </div>
   </section>
